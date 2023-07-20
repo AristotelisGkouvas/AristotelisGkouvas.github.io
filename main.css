@@ -1,9 +1,62 @@
-a {
-  font-size: medium;
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-image: url("./index_files/backround/backround.png");
+  background-repeat: repeat-x;
+  background-size: auto;
+  margin-right: auto;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 h3 {
-  font-size: 20px;
+  font-size: 24px;
+  margin: 0%;
 }
 h6 {
-  font-size: 14px;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  margin-bottom: 5px;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.row {
+  margin-left: auto;
+  --bs-gutter-x: 0;
+}
+#webgl {
+  object-position: bottom;
+}
+
+.container .my-3 .row > * {
+  margin: 0;
+  padding: 0;
 }
