@@ -4,7 +4,7 @@ body {
   line-height: 1.5;
   background-image: url("./index_files/backround/backround.png");
   background-repeat: repeat-x;
-  background-size: auto;
+  background-size: auto 1165px;
   margin-right: auto;
 }
 .navbar {
