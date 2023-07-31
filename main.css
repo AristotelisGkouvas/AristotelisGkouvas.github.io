@@ -1,11 +1,11 @@
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Sansita", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   background-image: url("./index_files/backround/backround.png");
   background-repeat: repeat-x;
-  background-size: auto 1165px;
-  margin-right: auto;
+  background-size: auto 1200px;
+  margin-right: 0;
 }
 .navbar {
   display: flex;
@@ -24,11 +24,11 @@ h3 {
 }
 h5 {
   color: #202020;
-  font-size: 8px;
+  font-size: 4px;
   margin: 0%;
 }
 h6 {
-  color: #ffffffab;
+  color: #ffffff60;
   font-size: 16px;
   margin-top: 0;
   margin-bottom: 10px;
@@ -59,11 +59,16 @@ a:hover {
 }
 
 .row {
-  margin-left: auto;
+  margin-left: 0;
   --bs-gutter-x: 0;
 }
 #webgl {
   object-position: bottom;
+}
+
+.container .row > * {
+  margin: 0;
+  padding: 0;
 }
 
 .container .my-3 .row > * {
