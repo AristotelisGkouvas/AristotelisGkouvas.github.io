@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#11141a" />
+    <meta
+      name="description"
+      content="IQManager — full-stack ERP & ticketing platform. Next.js + Django + PostgreSQL."
+    />
+    <title>IQManager — Aristotelis Gkouvas</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+    <link rel="canonical" href="https://aristotelisgkouvas.github.io/projects/iqmanager/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aristotelisgkouvas.github.io/projects/iqmanager/" />
+    <meta property="og:title" content="IQManager — Aristotelis Gkouvas" />
+    <meta property="og:description" content="Full-stack ERP & ticketing platform built on Next.js, Django REST and PostgreSQL." />
+    <meta property="og:image" content="https://aristotelisgkouvas.github.io/assets/projects/iqmanager.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IQManager — Aristotelis Gkouvas" />
+    <meta name="twitter:description" content="Full-stack ERP & ticketing platform built on Next.js, Django REST and PostgreSQL." />
+    <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/projects/iqmanager.png" />
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav"><a href="../../" class="brand" aria-label="Home">
+          <span class="brand-mark">AG</span>
+          <span>Aristotelis Gkouvas</span>
+        </a>
+        <nav>
+          <ul class="nav-links" aria-label="Primary">
+            <li><a href="../../#about">About</a></li>
+            <li><a href="../../#skills">Skills</a></li>
+            <li><a href="../../#work">Work</a></li>
+            <li><a href="../../#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-cta"><button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line class="top" x1="4" y1="6" x2="20" y2="6"/>
+              <line class="mid" x1="4" y1="12" x2="20" y2="12"/>
+              <line class="bot" x1="4" y1="18" x2="20" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="project-hero container">
+        <a href="../../#work" class="project-back reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1em;height:1em;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back to all work
+        </a>
+        <div class="project-meta-row reveal">
+          <span>Project <strong>01</strong></span>
+          <span>Year <strong>2024 — present</strong></span>
+          <span>Role <strong>Sole full-stack dev</strong></span>
+          <span>Status <strong style="color:var(--accent)">Production</strong></span>
+        </div>
+        <h1 class="project-title reveal">IQManager.</h1>
+        <p class="project-tagline reveal">
+          A full-stack ERP and ticketing platform that runs an entire
+          field-services business — customers, contracts, tickets, warehouse,
+          timesheets and invoicing, all in one system.
+        </p>
+      </section>
+
+      <section class="container reveal">
+        <div class="project-cover">
+          <img src="../../assets/projects/iqmanager.png" alt="IQManager dashboard with stats, low-stock alerts and recent tickets" />
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="project-overview">
+          <div class="reveal">
+            <h2>Overview</h2>
+            <p>
+              IQManager replaced a patchwork of spreadsheets, paper forms and
+              legacy desktop apps with one cohesive web platform. The goal was
+              to give every role — engineers, technicians, sales, accounting —
+              a single source of truth, while still feeling fast and unobtrusive
+              for daily work.
+            </p>
+            <p>
+              The backend is a modular Django monolith with 15+ apps
+              (customers, contracts, tickets, warehouse, timesheets, invoicing,
+              repairs, proposals, file manager, chat, email…) talking to a
+              shared PostgreSQL database. The frontend is a Next.js + Mantine
+              app that consumes the REST API with React Query for caching and
+              optimistic updates.
+            </p>
+            <h2>What I built</h2>
+            <p>
+              I'm the sole developer on the project — design, schema,
+              authentication, data import pipelines, every screen, the deploy
+              pipeline and the customer-facing release notes. New modules ship
+              behind feature flags and the whole stack is reproducible with
+              <code class="mono" style="color:var(--accent)">docker compose up</code>.
+            </p>
+          </div>
+          <aside class="facts reveal">
+            <h3>At a glance</h3>
+            <dl>
+              <div>
+                <dt>Type</dt>
+                <dd>Internal ERP &amp; ticketing</dd>
+              </div>
+              <div>
+                <dt>Team</dt>
+                <dd>Solo</dd>
+              </div>
+              <div>
+                <dt>Codebase</dt>
+                <dd>~70k LOC, 15+ Django apps</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd>
+                  <ul class="facts-stack">
+                    <li class="tag accent">Next.js 15</li>
+                    <li class="tag">React 18</li>
+                    <li class="tag">Mantine</li>
+                    <li class="tag">React Query</li>
+                    <li class="tag accent">Django 5</li>
+                    <li class="tag">DRF</li>
+                    <li class="tag">PostgreSQL</li>
+                    <li class="tag">Redis</li>
+                    <li class="tag">Docker</li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">01.</span>
+          <h2 class="h-section">Highlights</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+            <h3>Modular monolith</h3>
+            <p>15+ Django apps, each owning its slice of domain logic. Easy to grow without microservice overhead.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>JWT &amp; role-based perms</h3>
+            <p>Granular permissions per role and per resource, enforced both in DRF and in the Next.js middleware.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21a2 2 0 0 0 4 0"/></svg></div>
+            <h3>Real-time notifications</h3>
+            <p>System-wide notifications with badge counters, mark-as-read, and a unified activity log across modules.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg></div>
+            <h3>PDF report engine</h3>
+            <p>Templated PDF generation for proposals, repair reports and invoices — branded, paginated, multilingual.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+            <h3>Bulk import / export</h3>
+            <p>Excel and CSV import with row-level validation, dry-run preview and roll-back on error.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <h3>myDATA integration</h3>
+            <p>Greek e-invoicing pipeline with retry, signing and audit trail — invoices land in IAPR within seconds.</p>
+          </article>
+        </div>
+      </section>
+
+
+
+      <section class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">02.</span>
+          <h2 class="h-section">Screens</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="gallery-grid">
+          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/01-dashboard.png" data-caption="Dashboard — stats, low-stock alerts, recent tickets">
+            <img src="../../assets/projects/iqmanager/01-dashboard.png" alt="Dashboard — stats, low-stock alerts, recent tickets" loading="lazy" />
+            <span class="gallery-caption">Dashboard — stats, low-stock alerts, recent tickets</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/02-customers.png" data-caption="Customers — 100+ companies with type/country/status filters">
+            <img src="../../assets/projects/iqmanager/02-customers.png" alt="Customers — 100+ companies with type/country/status filters" loading="lazy" />
+            <span class="gallery-caption">Customers — 100+ companies with type/country/status filters</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/03-tickets.png" data-caption="Tickets — searchable list with status, priority, assignee">
+            <img src="../../assets/projects/iqmanager/03-tickets.png" alt="Tickets — searchable list with status, priority, assignee" loading="lazy" />
+            <span class="gallery-caption">Tickets — searchable list with status, priority, assignee</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/04-projects.png" data-caption="Contracts — service/maintenance contracts with renewal tracking">
+            <img src="../../assets/projects/iqmanager/04-projects.png" alt="Contracts — service/maintenance contracts with renewal tracking" loading="lazy" />
+            <span class="gallery-caption">Contracts — service/maintenance contracts with renewal tracking</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/05-invoicing.png" data-caption="Invoicing — issued / received invoices with payment status">
+            <img src="../../assets/projects/iqmanager/05-invoicing.png" alt="Invoicing — issued / received invoices with payment status" loading="lazy" />
+            <span class="gallery-caption">Invoicing — issued / received invoices with payment status</span>
+          </a>
+        </div>
+      </section>
+              <a href="../tank-3-dashboard/" class="container next-project reveal" style="text-decoration:none;display:flex;">
+        <p class="eyebrow">Next project</p>
+        <h2>Tank 3 Dashboard →</h2>
+        <p class="muted">Real-time monitoring for an LNG storage tank with a 3D thermal heatmap.</p>
+      </a>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>Designed &amp; built by Aristotelis Gkouvas</span>
+        <span>© <span id="year">2026</span></span>
+      </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
+</html>

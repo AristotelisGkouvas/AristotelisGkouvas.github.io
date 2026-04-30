@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#11141a" />
+    <meta
+      name="description"
+      content="3D Price Lab — drop-in STL/OBJ/3MF cost calculator with engineering-grade economics."
+    />
+    <title>3D Price Lab — Aristotelis Gkouvas</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+    <link rel="canonical" href="https://aristotelisgkouvas.github.io/projects/3d-price-lab/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aristotelisgkouvas.github.io/projects/3d-price-lab/" />
+    <meta property="og:title" content="3D Price Lab — Aristotelis Gkouvas" />
+    <meta property="og:description" content="Drop-in STL/OBJ/3MF cost calculator with engineering-grade economics. MIT licensed." />
+    <meta property="og:image" content="https://aristotelisgkouvas.github.io/assets/projects/3dpricelab-home.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="3D Price Lab — Aristotelis Gkouvas" />
+    <meta name="twitter:description" content="Drop-in STL/OBJ/3MF cost calculator with engineering-grade economics. MIT licensed." />
+    <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/projects/3dpricelab-home.png" />
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav"><a href="../../" class="brand" aria-label="Home">
+          <span class="brand-mark">AG</span>
+          <span>Aristotelis Gkouvas</span>
+        </a>
+        <nav>
+          <ul class="nav-links" aria-label="Primary">
+            <li><a href="../../#about">About</a></li>
+            <li><a href="../../#skills">Skills</a></li>
+            <li><a href="../../#work">Work</a></li>
+            <li><a href="../../#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-cta"><button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line class="top" x1="4" y1="6" x2="20" y2="6"/>
+              <line class="mid" x1="4" y1="12" x2="20" y2="12"/>
+              <line class="bot" x1="4" y1="18" x2="20" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="project-hero container">
+        <a href="../../#work" class="project-back reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1em;height:1em;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back to all work
+        </a>
+        <div class="project-meta-row reveal">
+          <span>Project <strong>03</strong></span>
+          <span>Year <strong>2026</strong></span>
+          <span>Role <strong>Solo</strong></span>
+          <span>Status <strong style="color:var(--accent)">Open source · MIT</strong></span>
+        </div>
+        <h1 class="project-title reveal">3D Price Lab.</h1>
+        <p class="project-tagline reveal">
+          Drop an STL, OBJ or 3MF and get a defensible quote — material,
+          electricity, labour, machine wear, margin and VAT, in any currency.
+          Files stay in the browser.
+        </p>
+      </section>
+
+      <section class="container reveal">
+        <div class="project-cover">
+          <img src="../../assets/projects/3dpricelab-home.png" alt="3D Price Lab landing page with hero and receipt mockup" />
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="project-overview">
+          <div class="reveal">
+            <h2>Overview</h2>
+            <p>
+              Most 3D-printing quoters either undercharge (because they only
+              count filament) or overcharge (because they pad a flat margin).
+              I wanted a tool that prices a print the way an engineer would —
+              by adding up the actual costs and being transparent about each
+              one.
+            </p>
+            <p>
+              The whole pricing engine runs in the browser. STL/OBJ/3MF files
+              are parsed locally with custom WASM-friendly code, the model is
+              previewed with Three.js, and the receipt updates live as you
+              tweak the cost model. Nothing ever leaves your machine.
+            </p>
+            <h2>Why it matters</h2>
+            <p>
+              Anyone running a small printing shop can self-host this and get
+              a quote calculator that respects their margins, currency and
+              local VAT rules — without subscribing to yet another SaaS.
+            </p>
+          </div>
+          <aside class="facts reveal">
+            <h3>At a glance</h3>
+            <dl>
+              <div>
+                <dt>Type</dt>
+                <dd>Web app (open source)</dd>
+              </div>
+              <div>
+                <dt>License</dt>
+                <dd>MIT</dd>
+              </div>
+              <div>
+                <dt>Privacy</dt>
+                <dd>100% client-side</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd>
+                  <ul class="facts-stack">
+                    <li class="tag accent">React 19</li>
+                    <li class="tag">TypeScript</li>
+                    <li class="tag accent">Three.js</li>
+                    <li class="tag">React Three Fiber</li>
+                    <li class="tag">Vite</li>
+                    <li class="tag">Zustand</li>
+                    <li class="tag">Tailwind</li>
+                    <li class="tag">i18next</li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">01.</span>
+          <h2 class="h-section">Highlights</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+            <h3>Drag &amp; drop import</h3>
+            <p>STL, OBJ and 3MF parsed entirely in the browser, with a Three.js previewer for orientation &amp; sanity checks.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3>Engineering cost model</h3>
+            <p>Material price, energy at slot tariff, labour rate, machine wear-per-hour, margin and VAT — every line itemised.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <h3>Multi-currency, multi-language</h3>
+            <p>Configurable currency formatting plus i18n via i18next. Switch the UI between Greek and English on the fly.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Privacy-first</h3>
+            <p>No file upload, no analytics, no third-party calls. Self-hostable as a single static bundle.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+            <h3>Tested &amp; type-safe</h3>
+            <p>Strict TypeScript across the codebase, Vitest unit tests on the pricing engine, ESLint + lint-staged hooks.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+            <h3>Themeable UI</h3>
+            <p>Three built-in themes (Blueprint, Studio, Light) and tokens that make new themes a one-file change.</p>
+          </article>
+        </div>
+      </section>
+
+
+
+      <section class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">02.</span>
+          <h2 class="h-section">Screens</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="gallery-grid">
+          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/01-hero.png" data-caption="Landing — hero with sample receipt">
+            <img src="../../assets/projects/3dpricelab/01-hero.png" alt="Landing — hero with sample receipt" loading="lazy" />
+            <span class="gallery-caption">Landing — hero with sample receipt</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/02-features.png" data-caption="Features — multi-colour aware, slicer-aware, multi-currency, offline">
+            <img src="../../assets/projects/3dpricelab/02-features.png" alt="Features — multi-colour aware, slicer-aware, multi-currency, offline" loading="lazy" />
+            <span class="gallery-caption">Features — multi-colour aware, slicer-aware, multi-currency, offline</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/03-pricing.png" data-caption="Pricing — Free / Pro / Team tiers">
+            <img src="../../assets/projects/3dpricelab/03-pricing.png" alt="Pricing — Free / Pro / Team tiers" loading="lazy" />
+            <span class="gallery-caption">Pricing — Free / Pro / Team tiers</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/04-auth.png" data-caption="Sign in — local-only auth, data stays in the browser">
+            <img src="../../assets/projects/3dpricelab/04-auth.png" alt="Sign in — local-only auth, data stays in the browser" loading="lazy" />
+            <span class="gallery-caption">Sign in — local-only auth, data stays in the browser</span>
+          </a>
+        </div>
+      </section>
+              <a href="../3dprinto-eshop/" class="container next-project reveal" style="text-decoration:none;display:flex;">
+        <p class="eyebrow">Next project</p>
+        <h2>3DPrinto eShop →</h2>
+        <p class="muted">A WooCommerce store with a custom auto-quoting plugin for 3D prints.</p>
+      </a>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>Designed &amp; built by Aristotelis Gkouvas</span>
+        <span>© <span id="year">2026</span></span>
+      </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
+</html>

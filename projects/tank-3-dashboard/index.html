@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#11141a" />
+    <meta
+      name="description"
+      content="Tank 3 Dashboard — real-time monitoring & 3D visualisation for an LNG storage tank."
+    />
+    <title>Tank 3 Dashboard — Aristotelis Gkouvas</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+    <link rel="canonical" href="https://aristotelisgkouvas.github.io/projects/tank-3-dashboard/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aristotelisgkouvas.github.io/projects/tank-3-dashboard/" />
+    <meta property="og:title" content="Tank 3 Dashboard — Aristotelis Gkouvas" />
+    <meta property="og:description" content="Real-time monitoring & 3D visualisation for an LNG storage tank with thermal heatmap." />
+    <meta property="og:image" content="https://aristotelisgkouvas.github.io/assets/projects/tank-3d.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tank 3 Dashboard — Aristotelis Gkouvas" />
+    <meta name="twitter:description" content="Real-time monitoring & 3D visualisation for an LNG storage tank with thermal heatmap." />
+    <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/projects/tank-3d.png" />
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav"><a href="../../" class="brand" aria-label="Home">
+          <span class="brand-mark">AG</span>
+          <span>Aristotelis Gkouvas</span>
+        </a>
+        <nav>
+          <ul class="nav-links" aria-label="Primary">
+            <li><a href="../../#about">About</a></li>
+            <li><a href="../../#skills">Skills</a></li>
+            <li><a href="../../#work">Work</a></li>
+            <li><a href="../../#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-cta"><button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line class="top" x1="4" y1="6" x2="20" y2="6"/>
+              <line class="mid" x1="4" y1="12" x2="20" y2="12"/>
+              <line class="bot" x1="4" y1="18" x2="20" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="project-hero container">
+        <a href="../../#work" class="project-back reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1em;height:1em;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back to all work
+        </a>
+        <div class="project-meta-row reveal">
+          <span>Project <strong>02</strong></span>
+          <span>Year <strong>2025 — present</strong></span>
+          <span>Role <strong>Full-stack dev</strong></span>
+          <span>Status <strong style="color:var(--accent)">Production</strong></span>
+        </div>
+        <h1 class="project-title reveal">Tank 3 Dashboard.</h1>
+        <p class="project-tagline reveal">
+          Real-time monitoring &amp; 3D visualisation for an LNG storage tank —
+          190+ thermistors, tiltmeters, seismic and inclinometer sensors, with
+          a Three.js scene that turns sensor data into a live thermal heatmap.
+        </p>
+      </section>
+
+      <section class="container reveal">
+        <div class="project-cover">
+          <img src="../../assets/projects/tank-3d.png" alt="3D tank model with thermal heatmap and sensor markers" />
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="project-overview">
+          <div class="reveal">
+            <h2>Overview</h2>
+            <p>
+              Operators don't want a wall of numbers — they want to glance at
+              the screen and instantly see whether the tank is healthy.
+              Tank 3 Dashboard takes data from a legacy Firebird database
+              and renders it as a live 3D model with colour-coded sensors,
+              alarm states, a thermal heatmap and historical charts.
+            </p>
+            <p>
+              A FastAPI bridge sits between Firebird and the React app,
+              translating proprietary tables into clean REST endpoints. The
+              frontend is built around a custom Three.js scene with React
+              Three Fiber, with separate views for the 3D tank, charts, map,
+              and alarms. There's also a kiosk mode for the control room.
+            </p>
+            <h2>The interesting part</h2>
+            <p>
+              The thermal heatmap is the showpiece — sensor temperatures are
+              interpolated onto the tank surface in a custom shader, with a
+              configurable colour ramp and an auto-range mode that adapts to
+              the actual temperatures in the tank. It runs at 60fps even on
+              a low-power kiosk machine.
+            </p>
+          </div>
+          <aside class="facts reveal">
+            <h3>At a glance</h3>
+            <dl>
+              <div>
+                <dt>Type</dt>
+                <dd>Industrial monitoring</dd>
+              </div>
+              <div>
+                <dt>Client</dt>
+                <dd>LNG storage operator (DESFA)</dd>
+              </div>
+              <div>
+                <dt>Sensors</dt>
+                <dd>190+ across 4 categories</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd>
+                  <ul class="facts-stack">
+                    <li class="tag accent">React + Vite</li>
+                    <li class="tag">TypeScript</li>
+                    <li class="tag">Three.js</li>
+                    <li class="tag">R3F</li>
+                    <li class="tag">Mantine</li>
+                    <li class="tag accent">FastAPI</li>
+                    <li class="tag">Python</li>
+                    <li class="tag">Firebird</li>
+                    <li class="tag">Docker</li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">01.</span>
+          <h2 class="h-section">Highlights</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+            <h3>Custom Three.js scene</h3>
+            <p>Cylindrical tank with sensor halos, alarm pulses, section views (roof, bottom, sections at 205°/295°) and camera presets.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M9 13l2 2 4-4"/></svg></div>
+            <h3>Thermal heatmap shader</h3>
+            <p>Sensor temperatures interpolated across the tank surface with a configurable colour ramp and auto-range mode.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+            <h3>Alarm system</h3>
+            <p>Per-sensor warning &amp; alarm thresholds with colour states across every view, plus a recent-alarms feed.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg></div>
+            <h3>Historical charts</h3>
+            <p>Time-range picker, multi-sensor overlays, downsampling for long ranges — built on lightweight chart libs.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div>
+            <h3>Map view</h3>
+            <p>Top-down map with sensor placements and live status, useful for identifying clusters of warnings.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <h3>Kiosk mode</h3>
+            <p>Auto-rotating fullscreen view for the control room, with health summary and rolling alarm ticker.</p>
+          </article>
+        </div>
+      </section>
+
+
+
+      <section class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">02.</span>
+          <h2 class="h-section">Screens</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="gallery-grid">
+          <a class="gallery-item reveal" href="../../assets/projects/tank/01-overview.png" data-caption="Overview — sensor health summary and recent alarms">
+            <img src="../../assets/projects/tank/01-overview.png" alt="Overview — sensor health summary and recent alarms" loading="lazy" />
+            <span class="gallery-caption">Overview — sensor health summary and recent alarms</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/tank/02-3d-heatmap.png" data-caption="3D Tank — Three.js scene with thermal heatmap shader">
+            <img src="../../assets/projects/tank/02-3d-heatmap.png" alt="3D Tank — Three.js scene with thermal heatmap shader" loading="lazy" />
+            <span class="gallery-caption">3D Tank — Three.js scene with thermal heatmap shader</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/tank/03-charts.png" data-caption="Charts — multi-sensor history with selectable time ranges">
+            <img src="../../assets/projects/tank/03-charts.png" alt="Charts — multi-sensor history with selectable time ranges" loading="lazy" />
+            <span class="gallery-caption">Charts — multi-sensor history with selectable time ranges</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/tank/04-alarms.png" data-caption="Alarms — full alarm log with status and severity">
+            <img src="../../assets/projects/tank/04-alarms.png" alt="Alarms — full alarm log with status and severity" loading="lazy" />
+            <span class="gallery-caption">Alarms — full alarm log with status and severity</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/tank/05-sensors.png" data-caption="Sensors — 189-sensor table with last reading and status">
+            <img src="../../assets/projects/tank/05-sensors.png" alt="Sensors — 189-sensor table with last reading and status" loading="lazy" />
+            <span class="gallery-caption">Sensors — 189-sensor table with last reading and status</span>
+          </a>
+        </div>
+      </section>
+              <a href="../3d-price-lab/" class="container next-project reveal" style="text-decoration:none;display:flex;">
+        <p class="eyebrow">Next project</p>
+        <h2>3D Price Lab →</h2>
+        <p class="muted">A drop-in 3D-print quoter with engineering-grade economics.</p>
+      </a>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>Designed &amp; built by Aristotelis Gkouvas</span>
+        <span>© <span id="year">2026</span></span>
+      </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
+</html>

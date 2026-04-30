@@ -1,404 +1,397 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#11141a" />
+    <meta
+      name="description"
+      content="Aristotelis Gkouvas — full-stack developer building ERPs, industrial dashboards and 3D printing tools."
+    />
+    <title>Aristotelis Gkouvas — Full-stack Developer</title>
+
+    <link rel="canonical" href="https://aristotelisgkouvas.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aristotelisgkouvas.github.io/" />
+    <meta property="og:title" content="Aristotelis Gkouvas — Full-stack Developer" />
+    <meta property="og:description" content="Full-stack developer building ERPs, industrial dashboards and 3D printing tools — Next.js, Django, Three.js." />
+    <meta property="og:image" content="https://aristotelisgkouvas.github.io/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aristotelis Gkouvas — Full-stack Developer" />
+    <meta name="twitter:description" content="Full-stack developer building ERPs, industrial dashboards and 3D printing tools." />
+    <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/og-image.png" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Aristotelis Gkouvas</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Aristotelis Gkouvas</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic1.png" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Aristotelis Gkouvas</h1>
-        <p class="section__text__p2">Full Stack Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/aristotelis-gkouvas/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/AristotelisGkouvas'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pi.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>1+ years <br />Full Stack Developer</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>Bachelor of Science in Computer Science<br />University of Ioannina</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              I'm an undergraduate student of Computer Science and Engineering, University of Ioannina with a passion for sports and travel. 
-              For the past five years, I have worked as a waiter, developing excellent interpersonal and customer service skills. 
-              In my free time, I enjoy staying active through sports like running, cycling, and football. 
-              I love the challenge of pushing myself to new limits and working with others to achieve shared goals. 
-              My goal in the coming years is to find a job that allows me to apply my skills and knowledge in the field I've studied. 
-              I'm eager to take on new challenges and continue learning and growing as a professional. 
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Front-End Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-                />
-                <div>
-                  <h3>Django</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Flask</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Bootstrap</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Back-End Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Game Development</h2>
-            <div class="article-container" style="margin-bottom: 1.4rem;">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Unity</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>OpenGL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>WebGL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">TCB Editor Settings</h2>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Dashboard Tank3 DESFA</h2>
-            </div>
-          </div>
-          <!--<div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>-->
-            <!--<h2 class="experience-sub-title project-title">Project Three</h2>-->
-            <!--<div class="btn-container">-->
-              <!--<button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >-->
-                <!--Github-->
-              <!--</button>-->
-              <!--<button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >-->
-                <!--Live Demo-->
-              <!--</button>-->
-            <!--</div>-->
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:aristotelisgouvas@gmail.com">aristotelisgouvas@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/aristotelis-gkouvas/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a href="#" class="brand" aria-label="Home">
+          <span class="brand-mark">AG</span>
+          <span>Aristotelis Gkouvas</span>
+        </a>
+
+        <nav>
+          <ul class="nav-links" aria-label="Primary">
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">Work</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+        </nav>
+
+        <div class="nav-cta">
+<button
+            class="icon-btn menu-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line class="top" x1="4" y1="6" x2="20" y2="6" />
+              <line class="mid" x1="4" y1="12" x2="20" y2="12" />
+              <line class="bot" x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+          </button>
         </div>
-      </nav>
-      <p>Copyright &#169; 2023 Aristotelis Gkouvas. All Rights Reserved.</p>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero container">
+        <div class="hero-status reveal">
+          <span class="dot" aria-hidden="true"></span>
+          Available for new projects
+        </div>
+        <p class="hero-greet reveal">// Hi, my name is</p>
+        <h1 class="hero-title h-display reveal">Aristotelis Gkouvas.</h1>
+        <p class="hero-role reveal">
+          I build <span class="accent" data-roles='["full-stack web apps","industrial dashboards","3D printing tools","internal tooling"]'>full-stack web apps</span>.
+        </p>
+        <p class="lead hero-desc reveal">
+          Computer Science undergrad at the University of Ioannina shipping
+          production software end-to-end — from Django/Postgres backends to
+          Three.js front-ends. I like making complex domains feel simple.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#work" class="btn btn-primary">
+            View work
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <dl class="hero-stats reveal">
+          <div>
+            <dt class="hero-stat-num">4+</dt>
+            <dd class="hero-stat-label">Production projects</dd>
+          </div>
+          <div>
+            <dt class="hero-stat-num">3 yrs</dt>
+            <dd class="hero-stat-label">Coding professionally</dd>
+          </div>
+          <div>
+            <dt class="hero-stat-num">15+</dt>
+            <dd class="hero-stat-label">Languages &amp; frameworks</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="about" class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">01.</span>
+          <h2 class="h-section">About</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="about-grid">
+          <div class="about-prose reveal">
+            <p>
+              Hello! I'm <strong>Aris</strong>, a Computer Science &amp; Engineering
+              undergrad at the University of Ioannina and a full-stack developer at
+              <strong>IQsoft</strong> in Greece.
+            </p>
+            <p>
+              Day to day I work on <strong>IQManager</strong> — a Next.js + Django ERP
+              that runs the field-services side of the company — and on
+              <strong>Tank 3 Dashboard</strong>, a real-time monitoring system for an
+              LNG storage tank with hundreds of sensors. On the side I build smaller
+              tools for 3D printing and a Greek-market e-shop.
+            </p>
+            <p>
+              Outside of code I run, cycle and play football. I'm happiest when a
+              messy real-world problem turns into something a non-technical user
+              can pick up without a manual.
+            </p>
+
+            <div class="about-facts">
+              <div>
+                <p class="fact-label">Education</p>
+                <p class="fact-value">BSc Computer Science &amp; Engineering</p>
+                <p class="fact-sub">University of Ioannina · 2021 — present</p>
+              </div>
+              <div>
+                <p class="fact-label">Languages</p>
+                <p class="fact-value">Greek <span class="muted">— native</span></p>
+                <p class="fact-value">English <span class="muted">— fluent (C1)</span></p>
+              </div>
+              <div>
+                <p class="fact-label">Based in</p>
+                <p class="fact-value">Ioannina, Greece</p>
+                <p class="fact-sub">Open to remote &amp; hybrid roles</p>
+              </div>
+            </div>
+
+            <div class="github-graph reveal">
+              <p class="fact-label">Recent GitHub activity</p>
+              <a
+                href="https://github.com/AristotelisGkouvas"
+                target="_blank"
+                rel="noopener"
+                aria-label="Open my GitHub profile"
+              >
+                <img
+                  src="https://ghchart.rshah.org/49d28a/AristotelisGkouvas"
+                  alt="GitHub contributions for AristotelisGkouvas"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="about-photo reveal" aria-hidden="true">
+            <img src="./assets/profile-pic2.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">02.</span>
+          <h2 class="h-section">Skills</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-group reveal">
+            <h3>Frontend</h3>
+            <ul class="skill-tags">
+              <li class="tag">React</li>
+              <li class="tag">Next.js</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">Vite</li>
+              <li class="tag">Mantine</li>
+              <li class="tag">Tailwind</li>
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+            </ul>
+          </article>
+          <article class="skill-group reveal">
+            <h3>Backend</h3>
+            <ul class="skill-tags">
+              <li class="tag">Python</li>
+              <li class="tag">Django</li>
+              <li class="tag">DRF</li>
+              <li class="tag">FastAPI</li>
+              <li class="tag">Flask</li>
+              <li class="tag">Node.js</li>
+              <li class="tag">Express</li>
+              <li class="tag">PHP</li>
+            </ul>
+          </article>
+          <article class="skill-group reveal">
+            <h3>Data &amp; Infra</h3>
+            <ul class="skill-tags">
+              <li class="tag">PostgreSQL</li>
+              <li class="tag">MariaDB</li>
+              <li class="tag">Firebird</li>
+              <li class="tag">Redis</li>
+              <li class="tag">Docker</li>
+              <li class="tag">Linux</li>
+              <li class="tag">Caddy</li>
+              <li class="tag">Git</li>
+            </ul>
+          </article>
+          <article class="skill-group reveal">
+            <h3>3D &amp; Graphics</h3>
+            <ul class="skill-tags">
+              <li class="tag">Three.js</li>
+              <li class="tag">React Three Fiber</li>
+              <li class="tag">WebGL</li>
+              <li class="tag">OpenGL</li>
+              <li class="tag">Unity</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="work" class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">03.</span>
+          <h2 class="h-section">Selected work</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="work-grid">
+          <a href="./projects/iqmanager/" class="work-card reveal">
+            <div class="work-img-wrap">
+              <img src="./assets/projects/iqmanager.png" alt="IQManager dashboard" />
+            </div>
+            <div class="work-body">
+              <div class="work-meta">
+                <span>Featured</span>
+                <span>2024 — present</span>
+                <span>Production</span>
+              </div>
+              <h3 class="work-title">IQManager</h3>
+              <p class="work-tagline">
+                A full-stack ERP and ticketing platform that runs an entire
+                field-services business — customers, contracts, tickets, warehouse,
+                timesheets, invoicing.
+              </p>
+              <ul class="work-stack">
+                <li class="tag">Next.js</li>
+                <li class="tag">Mantine</li>
+                <li class="tag">Django REST</li>
+                <li class="tag">PostgreSQL</li>
+                <li class="tag">Docker</li>
+              </ul>
+              <span class="work-cta">
+                Read case study
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="./projects/tank-3-dashboard/" class="work-card reveal">
+            <div class="work-img-wrap">
+              <img src="./assets/projects/tank-3d.png" alt="Tank 3 Dashboard with thermal heatmap" />
+            </div>
+            <div class="work-body">
+              <div class="work-meta">
+                <span>Featured</span>
+                <span>2025 — present</span>
+                <span>Production</span>
+              </div>
+              <h3 class="work-title">Tank 3 Dashboard</h3>
+              <p class="work-tagline">
+                Real-time monitoring for an LNG storage tank — 190+ thermistors,
+                tiltmeters, seismic and inclinometer sensors, with a 3D tank
+                viewer and thermal heatmap.
+              </p>
+              <ul class="work-stack">
+                <li class="tag">React</li>
+                <li class="tag">Three.js</li>
+                <li class="tag">FastAPI</li>
+                <li class="tag">Firebird</li>
+                <li class="tag">Docker</li>
+              </ul>
+              <span class="work-cta">
+                Read case study
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="./projects/3d-price-lab/" class="work-card reveal">
+            <div class="work-img-wrap">
+              <img src="./assets/projects/3dpricelab-home.png" alt="3D Price Lab landing page" />
+            </div>
+            <div class="work-body">
+              <div class="work-meta">
+                <span>Side project</span>
+                <span>2026</span>
+                <span>Open source</span>
+              </div>
+              <h3 class="work-title">3D Price Lab</h3>
+              <p class="work-tagline">
+                Drop-in STL/OBJ/3MF cost calculator that breaks a print into
+                material, electricity, labour, machine wear, margin and VAT —
+                in any currency, fully in the browser.
+              </p>
+              <ul class="work-stack">
+                <li class="tag">React 19</li>
+                <li class="tag">TypeScript</li>
+                <li class="tag">Three.js</li>
+                <li class="tag">Vite</li>
+                <li class="tag">Zustand</li>
+              </ul>
+              <span class="work-cta">
+                Read case study
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="./projects/3dprinto-eshop/" class="work-card reveal">
+            <div class="work-img-wrap">
+              <img src="./assets/projects/3dprinto-home.png" alt="3DPrinto eShop hero" />
+            </div>
+            <div class="work-body">
+              <div class="work-meta">
+                <span>Client project</span>
+                <span>2026</span>
+                <span>Production</span>
+              </div>
+              <h3 class="work-title">3DPrinto eShop</h3>
+              <p class="work-tagline">
+                WooCommerce store for a 3D printing studio with a custom WordPress
+                plugin for STL upload &amp; instant quoting, plus full Greek-market
+                integrations (myDATA, ACS, Box Now, Viva Wallet).
+              </p>
+              <ul class="work-stack">
+                <li class="tag">WordPress</li>
+                <li class="tag">WooCommerce</li>
+                <li class="tag">Custom Plugin</li>
+                <li class="tag">MariaDB</li>
+                <li class="tag">Docker</li>
+              </ul>
+              <span class="work-cta">
+                Read case study
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="contact" class="section container contact">
+        <div class="reveal">
+          <p class="eyebrow">04. Contact</p>
+          <h2 class="contact-prompt">Got an idea? Let's build it.</h2>
+          <p class="lead" style="margin-inline:auto;">
+            I'm open to roles, freelance work and interesting collaborations.
+            Drop me a line — I read everything.
+          </p>
+          <a href="mailto:aristotelisgouvas@gmail.com" class="contact-email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1.1em;height:1.1em;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+            aristotelisgouvas@gmail.com
+          </a>
+          <div class="socials" aria-label="Find me elsewhere">
+            <a href="https://www.linkedin.com/in/aristotelis-gkouvas/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-3.37-4-3.11-4 0v5.6h-3v-11h3v1.77c1.4-2.59 7-2.78 7 2.48v6.75z"/></svg>
+            </a>
+            <a href="https://github.com/AristotelisGkouvas" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="mailto:aristotelisgouvas@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>Designed &amp; built by Aristotelis Gkouvas</span>
+        <span>© <span id="year">2026</span></span>
+      </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="./script.js"></script>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
   </body>
 </html>
