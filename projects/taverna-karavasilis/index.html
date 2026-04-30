@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#11141a" />
+    <meta
+      name="description"
+      content="Taverna Karavasilis Menu — bilingual mobile-first digital menu for a Greek tavern, deployed on Cloudflare Pages."
+    />
+    <title>Taverna Karavasilis — Aristotelis Gkouvas</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+
+    <link rel="canonical" href="https://aristotelisgkouvas.github.io/projects/taverna-karavasilis/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aristotelisgkouvas.github.io/projects/taverna-karavasilis/" />
+    <meta property="og:title" content="Taverna Karavasilis Menu — Aristotelis Gkouvas" />
+    <meta property="og:description" content="Mobile-first digital menu for a Greek tavern with bilingual support, theme switching and Cloudflare Pages deployment." />
+    <meta property="og:image" content="https://aristotelisgkouvas.github.io/assets/projects/taverna/cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Taverna Karavasilis Menu — Aristotelis Gkouvas" />
+    <meta name="twitter:description" content="Mobile-first digital menu for a Greek tavern with bilingual support, theme switching and Cloudflare Pages deployment." />
+    <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/projects/taverna/cover.png" />
+
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a href="../../" class="brand" aria-label="Home">
+          <span class="brand-mark">AG</span>
+          <span>Aristotelis Gkouvas</span>
+        </a>
+        <nav>
+          <ul class="nav-links" aria-label="Primary">
+            <li><a href="../../#about">About</a></li>
+            <li><a href="../../#skills">Skills</a></li>
+            <li><a href="../../#work">Work</a></li>
+            <li><a href="../../#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-cta">
+          <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line class="top" x1="4" y1="6" x2="20" y2="6"/>
+              <line class="mid" x1="4" y1="12" x2="20" y2="12"/>
+              <line class="bot" x1="4" y1="18" x2="20" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="project-hero container">
+        <a href="../../#work" class="project-back reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1em;height:1em;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back to all work
+        </a>
+        <div class="project-meta-row reveal">
+          <span>Project <strong>05</strong></span>
+          <span>Year <strong>2026</strong></span>
+          <span>Role <strong>Solo developer</strong></span>
+          <span>Status <strong style="color:var(--accent)">Live</strong></span>
+        </div>
+        <h1 class="project-title reveal">Taverna Karavasilis Menu.</h1>
+        <p class="project-tagline reveal">
+          Mobile-first digital menu for a traditional Greek tavern. Bilingual
+          GR&nbsp;/&nbsp;EN, light&nbsp;/&nbsp;dark theme, and a snappy category
+          navigation — all deployed for free on Cloudflare Pages.
+        </p>
+        <p class="reveal" style="margin-top:1rem;">
+          <a class="btn-link" href="https://taverna-karavasilis-menu.pages.dev/" target="_blank" rel="noopener">
+            Visit live site
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1em;height:1em;"><path d="M7 17l10-10M7 7h10v10"/></svg>
+          </a>
+        </p>
+      </section>
+
+      <section class="container reveal">
+        <div class="project-cover">
+          <img src="../../assets/projects/taverna/cover.png" alt="Three phone mockups showing the Taverna Karavasilis menu in light EN, dark EN and dark GR modes" />
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="project-overview">
+          <div class="reveal">
+            <h2>Overview</h2>
+            <p>
+              The taverna wanted to replace their printed menu with something
+              guests can pull up on a phone — fast to load, easy to update,
+              and respectful of the brand. The result is a single-page React
+              app deployed for free on Cloudflare Pages, served from edge
+              locations with sub-100ms TTFB.
+            </p>
+            <p>
+              Mobile-only by design: opening the URL on a desktop intentionally
+              shows a "menu only on mobile" message, so guests use it the way
+              it was meant to be used.
+            </p>
+            <h2>Why it works</h2>
+            <p>
+              The menu data is a single JSON file — the owner can edit prices
+              and items without me, push to GitHub, and Cloudflare Pages
+              redeploys in seconds. No CMS, no monthly fee, no maintenance bill.
+            </p>
+          </div>
+          <aside class="facts reveal">
+            <h3>At a glance</h3>
+            <dl>
+              <div>
+                <dt>Type</dt>
+                <dd>Mobile-only digital menu</dd>
+              </div>
+              <div>
+                <dt>Client</dt>
+                <dd>Taverna Karavasilis (Ioannina)</dd>
+              </div>
+              <div>
+                <dt>Hosting</dt>
+                <dd>Cloudflare Pages (free tier)</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd>
+                  <ul class="facts-stack">
+                    <li class="tag accent">React</li>
+                    <li class="tag">TypeScript</li>
+                    <li class="tag">Vite</li>
+                    <li class="tag">CSS animations</li>
+                    <li class="tag">JSON-driven content</li>
+                    <li class="tag">Cloudflare Pages</li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">01.</span>
+          <h2 class="h-section">Highlights</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg></div>
+            <h3>Mobile-only by design</h3>
+            <p>Desktop visitors see a friendly "menu only on mobile" splash so guests interact with it the way it was built.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+            <h3>Bilingual GR / EN</h3>
+            <p>Greek and English content live side-by-side in the JSON; the user toggles with a tap, no page reload.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
+            <h3>Light &amp; dark themes</h3>
+            <p>Gold-on-cream by day, gold-on-black by night — both lovingly crafted with serif type for that traditional feel.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
+            <h3>Sticky category nav</h3>
+            <p>Horizontal pill nav scrolls with the page so guests can jump between Starters, Salads, Cooked, Grill etc.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8"/></svg></div>
+            <h3>JSON-driven content</h3>
+            <p>The whole menu is one JSON file — owner edits items + prices in any text editor, pushes, Cloudflare redeploys.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <h3>Edge-deployed, zero cost</h3>
+            <p>Cloudflare Pages free tier with global CDN — sub-100ms TTFB anywhere in Europe, no monthly bill.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">02.</span>
+          <h2 class="h-section">Screens</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="gallery-grid">
+          <a class="gallery-item reveal" href="../../assets/projects/taverna/01-hero.png" data-caption="Hero — light theme, EN locale">
+            <img src="../../assets/projects/taverna/01-hero.png" alt="Hero — light theme, EN locale" loading="lazy" />
+            <span class="gallery-caption">Hero — light theme, EN locale</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/taverna/02-starters.png" data-caption="Starters — scroll into the category">
+            <img src="../../assets/projects/taverna/02-starters.png" alt="Starters — scroll into the category" loading="lazy" />
+            <span class="gallery-caption">Starters — scroll into the category</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/taverna/03-cooked.png" data-caption="Cooked dishes — accordion-style sections">
+            <img src="../../assets/projects/taverna/03-cooked.png" alt="Cooked dishes — accordion-style sections" loading="lazy" />
+            <span class="gallery-caption">Cooked dishes — accordion-style sections</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/taverna/04-dark.png" data-caption="Dark theme — gold-on-black">
+            <img src="../../assets/projects/taverna/04-dark.png" alt="Dark theme — gold-on-black" loading="lazy" />
+            <span class="gallery-caption">Dark theme — gold-on-black</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/taverna/05-greek.png" data-caption="Greek locale — Παραδοσιακή κουζίνα">
+            <img src="../../assets/projects/taverna/05-greek.png" alt="Greek locale — Παραδοσιακή κουζίνα" loading="lazy" />
+            <span class="gallery-caption">Greek locale — Παραδοσιακή κουζίνα</span>
+          </a>
+        </div>
+      </section>
+
+      <a href="../iqmanager/" class="container next-project reveal" style="text-decoration:none;display:flex;">
+        <p class="eyebrow">Next project</p>
+        <h2>IQManager →</h2>
+        <p class="muted">Full-stack ERP &amp; ticketing platform for a field-services team.</p>
+      </a>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>Designed &amp; built by Aristotelis Gkouvas</span>
+        <span>© <span id="year">2026</span></span>
+      </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
+</html>
