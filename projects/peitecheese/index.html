@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#11141a" />
+    <meta
+      name="description"
+      content="ΠείτεCheese — QR-based event photo collection. Guests scan, upload and browse from the browser; the organiser gets everything in one gallery and one ZIP."
+    />
+    <title>ΠείτεCheese — Aristotelis Gkouvas</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+
+    <link rel="canonical" href="https://aristotelisgkouvas.github.io/projects/peitecheese/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aristotelisgkouvas.github.io/projects/peitecheese/" />
+    <meta property="og:title" content="ΠείτεCheese — Aristotelis Gkouvas" />
+    <meta property="og:description" content="Event photo collection over a QR code — no app, no account for guests. Django + React, S3 presigned URLs, Stripe, live wall." />
+    <meta property="og:image" content="https://aristotelisgkouvas.github.io/assets/projects/peitecheese/cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ΠείτεCheese — Aristotelis Gkouvas" />
+    <meta name="twitter:description" content="Event photo collection over a QR code — no app, no account for guests. Django + React, S3 presigned URLs, Stripe, live wall." />
+    <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/projects/peitecheese/cover.jpg" />
+
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a href="../../" class="brand" aria-label="Home">
+          <span class="brand-mark">AG</span>
+          <span>Aristotelis Gkouvas</span>
+        </a>
+        <nav>
+          <ul class="nav-links" aria-label="Primary">
+            <li><a href="../../#about">About</a></li>
+            <li><a href="../../#skills">Skills</a></li>
+            <li><a href="../../#work">Work</a></li>
+            <li><a href="../../#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-cta">
+          <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line class="top" x1="4" y1="6" x2="20" y2="6"/>
+              <line class="mid" x1="4" y1="12" x2="20" y2="12"/>
+              <line class="bot" x1="4" y1="18" x2="20" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="project-hero container">
+        <a href="../../#work" class="project-back reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1em;height:1em;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back to all work
+        </a>
+        <div class="project-meta-row reveal">
+          <span>Project <strong>02</strong></span>
+          <span>Year <strong>2026</strong></span>
+          <span>Role <strong>Solo developer</strong></span>
+          <span>Status <strong style="color:var(--accent)">Live</strong></span>
+        </div>
+        <h1 class="project-title reveal">ΠείτεCheese.</h1>
+        <p class="project-tagline reveal">
+          The best photos of a wedding are scattered across two hundred phones
+          and never reach the couple. ΠείτεCheese collects them behind a single
+          QR code — guests scan, upload and browse straight from the browser,
+          with no app and no account.
+        </p>
+        <p class="reveal" style="margin-top:1rem;">
+          <a class="btn-link" href="https://peitecheese.gr/" target="_blank" rel="noopener">
+            Visit live site
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1em;height:1em;"><path d="M7 17l10-10M7 7h10v10"/></svg>
+          </a>
+        </p>
+      </section>
+
+      <section class="container reveal">
+        <div class="project-cover">
+          <img src="../../assets/projects/peitecheese/cover.jpg" alt="ΠείτεCheese landing page — «Πες Cheese!» headline next to a phone showing a live event gallery" />
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="project-overview">
+          <div class="reveal">
+            <h2>Overview</h2>
+            <p>
+              ΠείτεCheese is a multi-tenant platform for collecting the media of
+              an event. One deployment hosts many independent events; each gets
+              an unguessable URL, its own gallery, its own albums and its own
+              storage namespace. The organiser prints a QR code, puts it on the
+              tables, and every guest becomes a photographer.
+            </p>
+            <p>
+              The whole design turns on one number: how many people bother. So
+              the guest path has <strong>zero friction</strong> — no install, no
+              sign-up, no permissions dialog. Open the link, see the gallery,
+              upload, leave a wish in the guestbook. Everything that needs an
+              account lives on the organiser's side.
+            </p>
+            <h2>Buy once, publish once</h2>
+            <p>
+              There is no subscription. A Stripe payment mints one
+              <strong>Activation</strong> — a reusable credit that publishes a
+              single draft event at a given tier. Building an event is free;
+              spending a credit is the publish gate. Tiers cap photos and videos
+              separately and enforce per type on upload, so a customer never
+              hits a limit they were not sold.
+            </p>
+            <h2>Private by default</h2>
+            <p>
+              The S3 bucket has no public policy. Every image reaches the browser
+              through a short-lived presigned URL, thumbnails and display-size
+              derivatives are generated lazily and cached, and the originals are
+              kept untouched for the final ZIP export.
+            </p>
+          </div>
+          <aside class="facts reveal">
+            <h3>At a glance</h3>
+            <dl>
+              <div>
+                <dt>Type</dt>
+                <dd>Multi-tenant SaaS product</dd>
+              </div>
+              <div>
+                <dt>Live at</dt>
+                <dd><a href="https://peitecheese.gr/" target="_blank" rel="noopener">peitecheese.gr</a></dd>
+              </div>
+              <div>
+                <dt>Guest auth</dt>
+                <dd>None — link &amp; QR based</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd>
+                  <ul class="facts-stack">
+                    <li class="tag accent">Django 5</li>
+                    <li class="tag">DRF</li>
+                    <li class="tag">PostgreSQL</li>
+                    <li class="tag accent">React 19</li>
+                    <li class="tag">TypeScript</li>
+                    <li class="tag">Vite</li>
+                    <li class="tag">AWS S3</li>
+                    <li class="tag">Stripe</li>
+                    <li class="tag">Docker</li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">01.</span>
+          <h2 class="h-section">Highlights</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg></div>
+            <h3>One QR, no app</h3>
+            <p>Guests scan a printable QR and land straight in the gallery. No install, no account, no permission prompts — the single biggest barrier removed.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <h3>Live wall</h3>
+            <p>A projector-ready slideshow that cycles new uploads as they arrive, plays videos inline and keeps a scan-me QR in the corner. It also demos the product to every guest in the room.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+            <h3>Activation credit model</h3>
+            <p>One-off Stripe payments mint reusable credits; applying one publishes a draft event at its tier. No subscriptions, no recurring billing, no dunning.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <h3>Presigned, private storage</h3>
+            <p>Media lives at <code class="mono" style="color:var(--accent)">events/{id}/…</code> in a private bucket, served only through expiring presigned URLs. Uploads are validated by type and size, login endpoints are rate-limited.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+            <h3>Everything back in one ZIP</h3>
+            <p>The organiser downloads the whole event as <em>Album / Uploader / file</em> in original quality, plus the guestbook as a printable page, plain text or CSV.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+            <h3>Albums, moderation, analytics</h3>
+            <p>Owners and co-hosts sort media into albums, remove anything they should not keep, and watch uploads, uploaders and engagement per event on a Recharts dashboard.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">02.</span>
+          <h2 class="h-section">Screens</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="gallery-grid">
+          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/01-hero.jpg" data-caption="Landing — «Πες Cheese! κι όλοι γίνονται φωτογράφοι»">
+            <img src="../../assets/projects/peitecheese/01-hero.jpg" alt="Landing hero with phone mockup" loading="lazy" />
+            <span class="gallery-caption">Landing — «Πες Cheese!»</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/06-guest.jpg" data-caption="Guest gallery on a phone — event header, live photo count, tap to upload">
+            <img src="../../assets/projects/peitecheese/06-guest.jpg" alt="Guest gallery on a phone" loading="lazy" />
+            <span class="gallery-caption">Guest gallery — mobile, no account</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/05-livewall.jpg" data-caption="Live wall — full-screen slideshow with a scan-me QR for the venue">
+            <img src="../../assets/projects/peitecheese/05-livewall.jpg" alt="Live wall slideshow with QR code" loading="lazy" />
+            <span class="gallery-caption">Live wall — projector slideshow</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/07-qr.png" data-caption="Printable QR sheet for the tables, generated per event">
+            <img src="../../assets/projects/peitecheese/07-qr.png" alt="Printable per-event QR sheet" loading="lazy" />
+            <span class="gallery-caption">Printable QR sheet — one per event</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/02-how.png" data-caption="How it works — set up, guests scan and upload, live wall and download">
+            <img src="../../assets/projects/peitecheese/02-how.png" alt="Three-step how it works section" loading="lazy" />
+            <span class="gallery-caption">Three steps, zero effort</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/03-features.png" data-caption="Feature grid — QR, real-time gallery, guestbook, unlimited uploaders, reactions, ZIP export">
+            <img src="../../assets/projects/peitecheese/03-features.png" alt="Feature grid on the landing page" loading="lazy" />
+            <span class="gallery-caption">Features — from QR to ZIP</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/04-pricing.png" data-caption="Pricing — Basic / Plus / Premium, paid once per event with separate photo and video caps">
+            <img src="../../assets/projects/peitecheese/04-pricing.png" alt="Pricing tiers Basic, Plus, Premium" loading="lazy" />
+            <span class="gallery-caption">Pricing — one payment per event</span>
+          </a>
+        </div>
+      </section>
+
+      <a href="../iqmanager/" class="container next-project reveal" style="text-decoration:none;display:flex;">
+        <p class="eyebrow">Next project</p>
+        <h2>IQManager →</h2>
+        <p class="muted">Full-stack ERP &amp; ticketing platform for a field-services team.</p>
+      </a>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>Designed &amp; built by Aristotelis Gkouvas</span>
+        <span>© <span id="year">2026</span></span>
+      </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
+</html>

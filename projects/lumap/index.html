@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#11141a" />
+    <meta
+      name="description"
+      content="Lumap — GIS asset-management platform for municipal street lighting: pillars, lamp posts, issues and statistics on a single PostGIS database."
+    />
+    <title>Lumap — Aristotelis Gkouvas</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+
+    <link rel="canonical" href="https://aristotelisgkouvas.github.io/projects/lumap/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://aristotelisgkouvas.github.io/projects/lumap/" />
+    <meta property="og:title" content="Lumap — Aristotelis Gkouvas" />
+    <meta property="og:description" content="Municipal street-lighting asset management on PostGIS — map, table, issues, statistics and platform analytics." />
+    <meta property="og:image" content="https://aristotelisgkouvas.github.io/assets/projects/lumap/cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lumap — Aristotelis Gkouvas" />
+    <meta name="twitter:description" content="Municipal street-lighting asset management on PostGIS — map, table, issues, statistics and platform analytics." />
+    <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/projects/lumap/cover.jpg" />
+
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a href="../../" class="brand" aria-label="Home">
+          <span class="brand-mark">AG</span>
+          <span>Aristotelis Gkouvas</span>
+        </a>
+        <nav>
+          <ul class="nav-links" aria-label="Primary">
+            <li><a href="../../#about">About</a></li>
+            <li><a href="../../#skills">Skills</a></li>
+            <li><a href="../../#work">Work</a></li>
+            <li><a href="../../#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-cta">
+          <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line class="top" x1="4" y1="6" x2="20" y2="6"/>
+              <line class="mid" x1="4" y1="12" x2="20" y2="12"/>
+              <line class="bot" x1="4" y1="18" x2="20" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="project-hero container">
+        <a href="../../#work" class="project-back reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1em;height:1em;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back to all work
+        </a>
+        <div class="project-meta-row reveal">
+          <span>Project <strong>01</strong></span>
+          <span>Year <strong>2026</strong></span>
+          <span>Role <strong>Solo developer</strong></span>
+          <span>Status <strong style="color:var(--accent)">In development</strong></span>
+        </div>
+        <h1 class="project-title reveal">Lumap.</h1>
+        <p class="project-tagline reveal">
+          A GIS platform that puts a municipality's entire street-lighting
+          network — every lamp post and every distribution pillar — on one map,
+          in one PostGIS database, reachable from a laptop in the office or a
+          phone in the field.
+        </p>
+      </section>
+
+      <section class="container reveal">
+        <div class="project-cover">
+          <img src="../../assets/projects/lumap/cover.jpg" alt="Lumap map screen — filters, result list and clustered lighting assets over Kalambaka" />
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="project-overview">
+          <div class="reveal">
+            <h2>Overview</h2>
+            <p>
+              Municipalities in Greece typically know their lighting network as a
+              pile of shapefiles, a spreadsheet and the memory of whoever has
+              been doing the maintenance longest. Lumap replaces that with a
+              live database: 1,300+ lamp posts and pillars for a single
+              municipality, each carrying its technical specs, coordinates,
+              photos, warranty, supplier, repair history and open faults.
+            </p>
+            <p>
+              It is built for a public-tender specification, so the boring parts
+              matter as much as the map — graded roles, per-area scoping, audit
+              trails, printable reports and a data model that survives an
+              inspection.
+            </p>
+            <h2>Why PostGIS and not shapefiles</h2>
+            <p>
+              A shapefile cannot do concurrent multi-user writes, caps field
+              names at 10 characters and text at 254, has no date type, no
+              transactions, no photos, no history and no relations. Lumap keeps
+              a single PostgreSQL/PostGIS database and treats
+              <strong>shapefile as an exchange format</strong> — one-click
+              export, plus a companion file mapping the truncated DBF column
+              names back to their full Greek labels.
+            </p>
+            <h2>Coordinates, once</h2>
+            <p>
+              Geometry is stored <strong>once, in WGS84</strong>. The Greek Grid
+              (ΕΓΣΑ 87 / EPSG:2100) is derived on read and on write, so the two
+              pairs can never drift apart. The form accepts input in either
+              system and fills in the other.
+            </p>
+          </div>
+          <aside class="facts reveal">
+            <h3>At a glance</h3>
+            <dl>
+              <div>
+                <dt>Type</dt>
+                <dd>Municipal GIS asset management</dd>
+              </div>
+              <div>
+                <dt>Client</dt>
+                <dd>Municipality of Meteora (public tender)</dd>
+              </div>
+              <div>
+                <dt>Scale</dt>
+                <dd>2,100+ assets, 6 municipalities, 12 districts</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd>
+                  <ul class="facts-stack">
+                    <li class="tag accent">Django 5.2</li>
+                    <li class="tag">DRF</li>
+                    <li class="tag">GeoDjango</li>
+                    <li class="tag accent">PostGIS</li>
+                    <li class="tag">React 18</li>
+                    <li class="tag">Vite</li>
+                    <li class="tag">MapLibre GL</li>
+                    <li class="tag">Docker</li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">01.</span>
+          <h2 class="h-section">Highlights</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 8 3 16 6 23 3 23 18 16 21 8 18 1 21 1 6"/><line x1="8" y1="3" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="21"/></svg></div>
+            <h3>Map and table, one dataset</h3>
+            <p>MapLibre GL with clustering, satellite / topographic basemaps and colour-by-status, wired to the same filters as the spreadsheet-style table.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+            <h3>WGS84 ↔ ΕΓΣΑ 87</h3>
+            <p>Stored once in WGS84, projected to the Greek Grid on the fly. Enter either pair in the form and the other one fills itself.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <h3>Address from coordinates</h3>
+            <p>Nominatim reverse geocoding <em>suggests</em> a street address after a GPS fix or a map click — cached on an 11 m grid, never silently overwriting what a human typed.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Permissions as flags, not roles</h3>
+            <p>Every action is its own flag, scoped to a state / region / prefecture / municipality / district hierarchy — an admin composes any combination without a code change.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+            <h3>Import &amp; export, including shapefile</h3>
+            <p>Bulk import from spreadsheets with row-level validation; export to Excel, CSV or shapefile with a field-mapping key for the truncated DBF names.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+            <h3>Statistics &amp; platform analytics</h3>
+            <p>LED conversion rate, energy saving, asset condition and open faults per district — printable as a report. A superadmin-only analytics screen tracks how the platform itself is used.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">02.</span>
+          <h2 class="h-section">Screens</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="gallery-grid">
+          <a class="gallery-item reveal" href="../../assets/projects/lumap/03-map.jpg" data-caption="Map — filters, live result list and clustered assets coloured by condition">
+            <img src="../../assets/projects/lumap/03-map.jpg" alt="Map with filters, result list and clustered assets" loading="lazy" />
+            <span class="gallery-caption">Map — filters, result list, clusters by condition</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/lumap/04-detail.jpg" data-caption="Asset card — photos, technical specs, both coordinate systems, supplier and warranty">
+            <img src="../../assets/projects/lumap/04-detail.jpg" alt="Asset detail drawer over the map" loading="lazy" />
+            <span class="gallery-caption">Asset card — specs, coordinates, warranty, photos</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/lumap/05-table.png" data-caption="Equipment table — 1,300+ rows, full-field search, bulk actions, import and export">
+            <img src="../../assets/projects/lumap/05-table.png" alt="Equipment table with search and bulk actions" loading="lazy" />
+            <span class="gallery-caption">Table — full-field search, bulk actions, import / export</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/lumap/06-stats.png" data-caption="Network statistics — LED conversion, energy saving, condition breakdown, open issues">
+            <img src="../../assets/projects/lumap/06-stats.png" alt="Network statistics dashboard" loading="lazy" />
+            <span class="gallery-caption">Statistics — LED conversion &amp; energy saving</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/lumap/07-issues.png" data-caption="Issues — faults and maintenance requests per asset, by severity and status">
+            <img src="../../assets/projects/lumap/07-issues.png" alt="Issues list by severity and status" loading="lazy" />
+            <span class="gallery-caption">Issues — faults per asset, by severity</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/lumap/02-login.jpg" data-caption="Sign-in — one-click demo accounts for the three graded roles the tender requires">
+            <img src="../../assets/projects/lumap/02-login.jpg" alt="Sign-in screen with demo role buttons" loading="lazy" />
+            <span class="gallery-caption">Sign-in — one-click demo roles</span>
+          </a>
+          <a class="gallery-item reveal" href="../../assets/projects/lumap/01-landing.png" data-caption="Public landing page — what the platform does, for municipalities evaluating it">
+            <img src="../../assets/projects/lumap/01-landing.png" alt="Public landing page for Lumap" loading="lazy" />
+            <span class="gallery-caption">Public landing page</span>
+          </a>
+        </div>
+      </section>
+
+      <a href="../peitecheese/" class="container next-project reveal" style="text-decoration:none;display:flex;">
+        <p class="eyebrow">Next project</p>
+        <h2>ΠείτεCheese →</h2>
+        <p class="muted">QR-based photo collection for weddings and parties — no app, no account.</p>
+      </a>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>Designed &amp; built by Aristotelis Gkouvas</span>
+        <span>© <span id="year">2026</span></span>
+      </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
+</html>
