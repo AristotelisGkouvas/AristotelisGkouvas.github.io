@@ -64,6 +64,14 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+/* The closed mobile nav is parked off-screen right (translateX(100%)), which
+   otherwise widens the document and lets the page scroll sideways on a phone.
+   `clip` instead of `hidden` so it doesn't turn the root into a scroll
+   container and break sticky positioning. */
+html {
+  overflow-x: clip;
+}
+
 body {
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -1000,6 +1008,134 @@ h1, h2, h3, h4 {
   color: var(--text-2);
   font-size: 0.9rem;
   line-height: 1.55;
+}
+
+/* -- Experience timeline ---------------------------------- */
+
+.timeline {
+  display: grid;
+  gap: 1.25rem;
+  position: relative;
+  padding-inline-start: 1.75rem;
+}
+
+/* The rail. Sits behind the dots and stops at the last entry. */
+.timeline::before {
+  content: "";
+  position: absolute;
+  inset-block: 0.6rem 0.6rem;
+  inset-inline-start: 0.3rem;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent) 0%,
+    var(--border) 45%,
+    transparent 100%
+  );
+}
+
+.tl-item {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color var(--t-base) var(--ease), transform var(--t-base) var(--ease);
+}
+
+.tl-item:hover {
+  border-color: var(--border-2);
+  transform: translateY(-2px);
+}
+
+.tl-item::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: -1.75rem;
+  top: 1.9rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--border-2);
+  transform: translateX(-0.02rem);
+}
+
+.tl-item.is-current::before {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: var(--glow);
+}
+
+.tl-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.tl-role {
+  font-size: 1.05rem;
+  font-weight: 650;
+}
+
+.tl-org {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.tl-dates {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-3);
+  white-space: nowrap;
+}
+
+.tl-meta {
+  font-size: 0.82rem;
+  color: var(--text-3);
+  margin-bottom: 0.9rem;
+}
+
+/* The bullet list. Excludes .tl-stack, which is a tag row, not prose. */
+.tl-item ul:not(.tl-stack) {
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.tl-item ul:not(.tl-stack) > li {
+  position: relative;
+  padding-inline-start: 1.1rem;
+  color: var(--text-2);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.tl-item ul:not(.tl-stack) > li::before {
+  content: "▸";
+  position: absolute;
+  inset-inline-start: 0;
+  color: var(--accent);
+  font-size: 0.75rem;
+  line-height: 1.75;
+}
+
+.tl-item ul.tl-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  list-style: none;
+}
+
+@media (max-width: 640px) {
+  .timeline { padding-inline-start: 1.35rem; }
+  .tl-item { padding: 1.25rem; }
+  .tl-item::before { inset-inline-start: -1.35rem; top: 1.6rem; }
+  .tl-dates { white-space: normal; }
 }
 
 /* -- Project gallery + lightbox --------------------------- */

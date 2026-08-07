@@ -1,3 +1,20 @@
+// ---------------------------------------------------------------------------
+// Analytics — GoatCounter. Privacy-friendly: no cookies, no personal data, so
+// no consent banner is required.
+//
+// TO SWITCH ON: register the site at https://www.goatcounter.com/ (free) and
+// put the code you pick here. Until then this stays off and nothing loads.
+const GOATCOUNTER_CODE = ""; // e.g. "aristotelisgkouvas"
+// ---------------------------------------------------------------------------
+(() => {
+  if (!GOATCOUNTER_CODE) return;
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = "https://gc.zgo.at/count.js";
+  s.dataset.goatcounter = `https://${GOATCOUNTER_CODE}.goatcounter.com/count`;
+  document.head.appendChild(s);
+})();
+
 // Mobile menu
 (() => {
   const toggle = document.querySelector(".menu-toggle");
@@ -135,14 +152,28 @@
   let roles;
   try { roles = JSON.parse(el.dataset.roles); } catch { return; }
   if (!Array.isArray(roles) || roles.length < 2) return;
+
+  // The text swaps itself every few seconds. Announce it, and don't animate
+  // at all for anyone who asked the OS to stop moving things.
+  el.setAttribute("aria-live", "polite");
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
   let i = 0;
+  let timer;
   el.style.transition = "opacity 220ms ease";
-  setInterval(() => {
+  const tick = () => {
     el.style.opacity = "0";
     setTimeout(() => {
       i = (i + 1) % roles.length;
       el.textContent = roles[i];
       el.style.opacity = "1";
     }, 220);
-  }, 2800);
+  };
+  const start = () => { timer ??= setInterval(tick, 2800); };
+  const stop = () => { clearInterval(timer); timer = undefined; };
+  // Pause while the tab is hidden — no point animating into an empty room.
+  document.addEventListener("visibilitychange", () => {
+    document.hidden ? stop() : start();
+  });
+  start();
 })();

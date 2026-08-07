@@ -26,6 +26,40 @@
     <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/og-image.png" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="./style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aristotelis Gkouvas",
+        "alternateName": "Αριστοτέλης Γκούβας",
+        "url": "https://aristotelisgkouvas.github.io/",
+        "image": "https://aristotelisgkouvas.github.io/assets/profile-pic2.png",
+        "email": "mailto:aristotelisgouvas@gmail.com",
+        "jobTitle": "Full-stack Developer",
+        "description": "Full-stack developer building ERPs, industrial dashboards, GIS platforms and 3D printing tools — Next.js, Django, Three.js.",
+        "worksFor": { "@type": "Organization", "name": "IQsoft" },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Ioannina",
+          "sameAs": "https://www.uoi.gr/"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ioannina",
+          "addressCountry": "GR"
+        },
+        "knowsLanguage": ["el", "en"],
+        "knowsAbout": [
+          "Django", "Django REST Framework", "Next.js", "React", "TypeScript",
+          "Three.js", "WebGL", "FastAPI", "PostgreSQL", "PostGIS", "Docker"
+        ],
+        "sameAs": [
+          "https://github.com/AristotelisGkouvas",
+          "https://www.linkedin.com/in/aristotelis-gkouvas/"
+        ]
+      }
+    </script>
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
@@ -40,6 +74,7 @@
         <nav>
           <ul class="nav-links" aria-label="Primary">
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#work">Work</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -125,7 +160,7 @@
             <p>
               Alongside those I built <strong>Lumap</strong>, a PostGIS platform that
               maps a municipality's whole street-lighting network, and
-              <strong>ΠείτεCheese</strong>, a live SaaS product that collects every
+              <strong lang="el">ΠείτεCheese</strong>, a live SaaS product that collects every
               guest's photos at an event behind a single QR code. Plus smaller tools
               for 3D printing and a Greek-market e-shop.
             </p>
@@ -153,6 +188,9 @@
               </div>
             </div>
 
+            <!-- Third-party image. If the service is down, drop the whole block
+                 rather than leave a broken graph on the page. It can't start
+                 hidden: a display:none image never triggers its lazy load. -->
             <div class="github-graph reveal">
               <p class="fact-label">Recent GitHub activity</p>
               <a
@@ -165,6 +203,8 @@
                   src="https://ghchart.rshah.org/49d28a/AristotelisGkouvas"
                   alt="GitHub contributions for AristotelisGkouvas"
                   loading="lazy"
+                  decoding="async"
+                  onerror="this.closest('.github-graph').remove()"
                 />
               </a>
             </div>
@@ -175,9 +215,75 @@
         </div>
       </section>
 
-      <section id="skills" class="section container">
+      <section id="experience" class="section container">
         <div class="section-head reveal">
           <span class="section-num">02.</span>
+          <h2 class="h-section">Experience</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="timeline">
+          <article class="tl-item is-current reveal">
+            <div class="tl-head">
+              <h3 class="tl-role">Full-stack Developer <span class="muted">·</span> <span class="tl-org">IQsoft</span></h3>
+              <span class="tl-dates">2023 — present</span>
+            </div>
+            <p class="tl-meta">Ioannina, Greece · Full-time</p>
+            <ul>
+              <li>Sole developer of <strong>IQManager</strong>, the ERP and ticketing platform the company runs on — ~70k LOC, 15+ Django apps, one PostgreSQL database, from schema to deploy pipeline.</li>
+              <li>Built <strong>Tank 3 Dashboard</strong>, real-time monitoring for an LNG storage tank: 190+ sensors, a Three.js thermal heatmap and a FastAPI bridge over a legacy Firebird database.</li>
+              <li>Built <strong>Lumap</strong>, a PostGIS platform mapping a municipality's entire street-lighting network, for a public tender.</li>
+              <li>Beyond the code: hardware selection and servicing, on-site installations and customer technical support — which is also where most of the product decisions come from.</li>
+            </ul>
+            <ul class="tl-stack">
+              <li class="tag">Django</li>
+              <li class="tag">DRF</li>
+              <li class="tag">Next.js</li>
+              <li class="tag">React</li>
+              <li class="tag">PostgreSQL</li>
+              <li class="tag">PostGIS</li>
+              <li class="tag">Three.js</li>
+              <li class="tag">FastAPI</li>
+              <li class="tag">Docker</li>
+            </ul>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-head">
+              <h3 class="tl-role">Freelance Developer <span class="muted">·</span> <span class="tl-org">Independent</span></h3>
+              <span class="tl-dates">2026</span>
+            </div>
+            <p class="tl-meta">Client work, alongside full-time</p>
+            <ul>
+              <li>Launched <strong lang="el">ΠείτεCheese</strong>, a live multi-tenant SaaS for event photo collection — Stripe billing, S3 presigned storage, no-account guest flow.</li>
+              <li>Delivered the <strong>3DPrinto</strong> WooCommerce storefront with a custom WordPress plugin for STL upload and instant quoting, plus myDATA, multi-courier shipping and Viva Wallet integrations.</li>
+              <li>Shipped a bilingual digital menu for <strong>Taverna Karavasilis</strong> that costs the owner nothing to run — JSON content, Cloudflare Pages free tier.</li>
+            </ul>
+            <ul class="tl-stack">
+              <li class="tag">React</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">Stripe</li>
+              <li class="tag">AWS S3</li>
+              <li class="tag">WooCommerce</li>
+              <li class="tag">PHP</li>
+            </ul>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-head">
+              <h3 class="tl-role">BSc Computer Science &amp; Engineering <span class="muted">·</span> <span class="tl-org">University of Ioannina</span></h3>
+              <span class="tl-dates">2021 — present</span>
+            </div>
+            <p class="tl-meta">Ioannina, Greece</p>
+            <ul>
+              <li>Coursework across compilers, computer graphics (OpenGL / WebGL), databases and concurrent systems — the graphics and database halves both ended up being daily work.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section container">
+        <div class="section-head reveal">
+          <span class="section-num">03.</span>
           <h2 class="h-section">Skills</h2>
           <span class="section-divider" aria-hidden="true"></span>
         </div>
@@ -236,7 +342,7 @@
 
       <section id="work" class="section container">
         <div class="section-head reveal">
-          <span class="section-num">03.</span>
+          <span class="section-num">04.</span>
           <h2 class="h-section">Selected work</h2>
           <span class="section-divider" aria-hidden="true"></span>
         </div>
@@ -281,7 +387,7 @@
                 <span>2026</span>
                 <span>Live</span>
               </div>
-              <h3 class="work-title">ΠείτεCheese</h3>
+              <h3 class="work-title" lang="el">ΠείτεCheese</h3>
               <p class="work-tagline">
                 Multi-tenant SaaS that collects every guest's photos and videos
                 behind one QR code — no app, no account — with a live wall,
@@ -455,7 +561,7 @@
 
       <section id="contact" class="section container contact">
         <div class="reveal">
-          <p class="eyebrow">04. Contact</p>
+          <p class="eyebrow">05. Contact</p>
           <h2 class="contact-prompt">Got an idea? Let's build it.</h2>
           <p class="lead" style="margin-inline:auto;">
             I'm open to roles, freelance work and interesting collaborations.
