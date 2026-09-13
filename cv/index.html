@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0C1117" />
+    <meta
+      name="description"
+      content="Curriculum vitae of Aristotelis Gkouvas — full-stack developer building ERPs, industrial dashboards and GIS platforms."
+    />
+    <title>CV — Aristotelis Gkouvas</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131B23' stroke='%232C3E4D'/%3E%3Ctext x='16' y='21' font-family='Fira Code,monospace' font-size='13' font-weight='600' text-anchor='middle' fill='%239DBEDB'%3EAG%3C/text%3E%3C/svg%3E" />
+
+    <link rel="canonical" href="https://aristotelisgkouvas.github.io/cv/" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://aristotelisgkouvas.github.io/cv/" />
+    <meta property="og:title" content="CV — Aristotelis Gkouvas" />
+    <meta property="og:description" content="Full-stack developer — Django, Next.js, PostGIS, Three.js. Ioannina, Greece." />
+    <meta property="og:image" content="https://aristotelisgkouvas.github.io/assets/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CV — Aristotelis Gkouvas" />
+    <meta name="twitter:description" content="Full-stack developer — Django, Next.js, PostGIS, Three.js. Ioannina, Greece." />
+    <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/og-image.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&amp;family=Figtree:wght@400;500;600&amp;family=Fira+Code:wght@400;500&amp;display=swap"
+    />
+    <link rel="stylesheet" href="../style.css" />
+
+    <style>
+      /* The CV is one column on purpose: it has to survive being printed,
+         pasted into an ATS box and skim-read in thirty seconds. */
+      .cv {
+        width: min(100% - 2rem, 860px);
+        margin-inline: auto;
+        padding-block: clamp(2rem, 6vw, 4rem);
+      }
+
+      .cv-head {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .cv-name {
+        font-size: clamp(1.9rem, 4vw, 2.6rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.05;
+      }
+
+      .cv-title {
+        font-family: var(--font-mono);
+        color: var(--accent);
+        font-size: 0.95rem;
+        margin-top: 0.35rem;
+      }
+
+      .cv-contact {
+        font-size: 0.88rem;
+        color: var(--text-2);
+        text-align: right;
+        line-height: 1.7;
+      }
+
+      .cv-contact a { color: var(--text-2); }
+      .cv-contact a:hover { color: var(--accent); }
+
+      .cv-section { margin-top: 2.25rem; }
+
+      .cv-section > h2 {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.1rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .cv-entry { margin-bottom: 1.6rem; }
+      .cv-entry:last-child { margin-bottom: 0; }
+
+      .cv-entry-head {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem 1rem;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
+      .cv-role { font-size: 1.02rem; font-weight: 700; }
+      .cv-org { color: var(--accent); font-weight: 600; }
+
+      .cv-dates {
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        color: var(--text-3);
+        white-space: nowrap;
+      }
+
+      .cv-meta {
+        font-size: 0.84rem;
+        color: var(--text-3);
+        margin-bottom: 0.55rem;
+      }
+
+      .cv-entry ul {
+        display: grid;
+        gap: 0.4rem;
+        padding-left: 1.1rem;
+      }
+
+      .cv-entry li {
+        list-style: disc;
+        font-size: 0.92rem;
+        color: var(--text-2);
+        line-height: 1.55;
+      }
+
+      .cv-entry li::marker { color: var(--text-3); }
+
+      .cv-skills {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.6rem 1.25rem;
+        font-size: 0.92rem;
+      }
+
+      .cv-skills dt {
+        font-family: var(--font-mono);
+        font-size: 0.82rem;
+        color: var(--text-3);
+        white-space: nowrap;
+      }
+
+      .cv-skills dd { color: var(--text-2); }
+
+      .cv-summary { color: var(--text-2); font-size: 0.98rem; max-width: 70ch; }
+
+      .cv-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 2.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .cv-hint {
+        font-size: 0.84rem;
+        color: var(--text-3);
+        margin-top: 0.85rem;
+      }
+
+      @media (max-width: 600px) {
+        .cv-contact { text-align: left; }
+        .cv-skills { grid-template-columns: 1fr; gap: 0.1rem; }
+        .cv-skills dd { margin-bottom: 0.7rem; }
+      }
+
+      @media print {
+        .cv { width: 100%; padding: 0; }
+        .cv-actions, .cv-hint { display: none !important; }
+        .cv-section { margin-top: 0.55cm; }
+        .cv-entry { margin-bottom: 0.4cm; break-inside: avoid; }
+        .cv-head { padding-bottom: 0.3cm; }
+        .cv-name { font-size: 20pt; }
+        .cv-entry li { font-size: 9.5pt; }
+        .cv-summary { font-size: 10pt; }
+        @page { margin: 1.4cm 1.5cm; }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a href="../" class="brand" aria-label="Home">
+          <span class="brand-mark">AG</span>
+          <span>Aristotelis Gkouvas</span>
+        </a>
+        <nav aria-label="Primary">
+          <ul id="primary-nav" class="nav-links">
+            <li><a href="../#services">Services</a></li>
+            <li><a href="../#work">Work</a></li>
+            <li><a href="../#process">Process</a></li>
+            <li><a href="../#faq">FAQ</a></li>
+            <li><a href="../cv/">CV</a></li>
+          </ul>
+        </nav>
+        <div class="nav-cta">
+          <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line class="top" x1="4" y1="6" x2="20" y2="6"/>
+              <line class="mid" x1="4" y1="12" x2="20" y2="12"/>
+              <line class="bot" x1="4" y1="18" x2="20" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="cv">
+      <div class="cv-head">
+        <div>
+          <h1 class="cv-name">Aristotelis Gkouvas</h1>
+          <p class="cv-title">Full-stack Developer</p>
+        </div>
+        <p class="cv-contact">
+          Ioannina, Greece · open to remote<br />
+          <a href="mailto:aristotelisgouvas@gmail.com">aristotelisgouvas@gmail.com</a><br />
+          <a href="https://github.com/AristotelisGkouvas" target="_blank" rel="noopener">github.com/AristotelisGkouvas</a>
+          ·
+          <a href="https://www.linkedin.com/in/aristotelis-gkouvas/" target="_blank" rel="noopener">LinkedIn</a><br />
+          <a href="https://aristotelisgkouvas.github.io/">aristotelisgkouvas.github.io</a>
+        </p>
+      </div>
+
+      <section class="cv-section">
+        <h2>Profile</h2>
+        <p class="cv-summary">
+          Full-stack developer with three years of production experience, building
+          and running business-critical systems end to end — Django/PostgreSQL
+          backends, Next.js and React front-ends, and Three.js where the data is
+          easier to understand in three dimensions. Most of my work is line-of-business
+          software for non-technical users: ERPs, industrial monitoring and GIS.
+          Computer Science undergraduate, working full-time alongside studies.
+        </p>
+      </section>
+
+      <section class="cv-section">
+        <h2>Experience</h2>
+
+        <article class="cv-entry">
+          <div class="cv-entry-head">
+            <h3 class="cv-role">Full-stack Developer · <span class="cv-org">IQsoft</span></h3>
+            <span class="cv-dates">2023 — present</span>
+          </div>
+          <p class="cv-meta">Ioannina, Greece · Full-time</p>
+          <ul>
+            <li>
+              Sole developer of <strong>IQManager</strong>, the ERP and ticketing
+              platform the company runs on — 15+ Django apps over one PostgreSQL
+              database, from schema design through to the deploy pipeline.
+            </li>
+            <li>
+              Built <strong>Tank 3 Dashboard</strong>, real-time monitoring for an
+              LNG storage tank: 189 sensors, a Three.js thermal heatmap and a
+              FastAPI bridge over a legacy Firebird database.
+            </li>
+            <li>
+              Building <strong>Lumap</strong>, a GeoDjango/PostGIS platform mapping a
+              municipality's entire street-lighting network, to a public-tender
+              specification. In development.
+            </li>
+            <li>
+              Hardware selection and servicing, on-site installation and direct
+              customer support — where most of the product decisions come from.
+            </li>
+          </ul>
+        </article>
+
+        <article class="cv-entry">
+          <div class="cv-entry-head">
+            <h3 class="cv-role">Freelance Developer · <span class="cv-org">Independent</span></h3>
+            <span class="cv-dates">2026</span>
+          </div>
+          <p class="cv-meta">Client work, alongside full-time employment</p>
+          <ul>
+            <li>
+              Built <strong>Loukoumi</strong> (<a href="https://myloukoumi.com/" target="_blank" rel="noopener">myloukoumi.com</a>),
+              a bilingual Django platform matching Greek cultural associations with sponsor
+              companies — two distinct onboarding flows, verified listings, region and theme matching.
+            </li>
+            <li>
+              Built the <strong>DK Apartments</strong> site (<a href="https://dkapartments.gr/" target="_blank" rel="noopener">dkapartments.gr</a>) —
+              bilingual, dependency-free single-file marketing site for three short-stay apartments,
+              with LodgingBusiness structured data and a Booking.com availability hand-off.
+            </li>
+            <li>
+              Launched <strong lang="el">ΠείτεCheese</strong>, a multi-tenant SaaS for
+              event photo collection — Stripe billing, S3 presigned uploads, no-account
+              guest flow. Live with paying customers.
+            </li>
+            <li>
+              Delivered the <strong>3DPrinto</strong> WooCommerce storefront with a
+              custom WordPress plugin for STL upload and instant quoting, plus myDATA,
+              multi-courier shipping and Viva Wallet integrations.
+            </li>
+            <li>
+              Shipped a bilingual digital menu for <strong>Taverna Karavasilis</strong>
+              with zero running cost for the owner — JSON content on Cloudflare Pages.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="cv-section">
+        <h2>Education</h2>
+        <article class="cv-entry">
+          <div class="cv-entry-head">
+            <h3 class="cv-role">BSc Computer Science &amp; Engineering · <span class="cv-org">University of Ioannina</span></h3>
+            <span class="cv-dates">2021 — present</span>
+          </div>
+          <p class="cv-meta">Ioannina, Greece · studying alongside full-time work</p>
+          <ul>
+            <li>
+              Coursework across compilers, computer graphics (OpenGL / WebGL),
+              databases and concurrent systems — the graphics and database halves
+              both became daily work.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="cv-section">
+        <h2>Skills</h2>
+        <dl class="cv-skills">
+          <dt>Frontend</dt>
+          <dd>React, Next.js, TypeScript, Vite, Mantine, Tailwind</dd>
+          <dt>Backend</dt>
+          <dd>Python, Django, Django REST Framework, FastAPI, Flask, Node.js, PHP</dd>
+          <dt>Data &amp; infra</dt>
+          <dd>PostgreSQL, PostGIS, MariaDB, Firebird, Redis, Docker, Linux, Caddy, Git</dd>
+          <dt>3D &amp; graphics</dt>
+          <dd>Three.js, React Three Fiber, WebGL, OpenGL, Unity</dd>
+          <dt>Languages</dt>
+          <dd>Greek (native), English (C1)</dd>
+        </dl>
+      </section>
+
+      <section class="cv-section">
+        <h2>Selected projects</h2>
+        <p class="cv-summary">
+          Full case studies, with screenshots and the reasoning behind the
+          architecture, are at
+          <a href="https://aristotelisgkouvas.github.io/#work">aristotelisgkouvas.github.io</a>.
+        </p>
+      </section>
+
+      <div class="cv-actions">
+        <button class="btn btn-primary" type="button" id="print-cv">
+          Print / Save as PDF
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>
+        </button>
+        <a class="btn btn-ghost" href="../">Back to portfolio</a>
+      </div>
+      <p class="cv-hint">
+        This page is styled for print — "Save as PDF" gives you a clean,
+        black-on-white two-page CV.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>Designed &amp; built by Aristotelis Gkouvas</span>
+        <span>© <span id="year">2026</span></span>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById("print-cv").addEventListener("click", () => window.print());
+    </script>
+  </body>
+</html>

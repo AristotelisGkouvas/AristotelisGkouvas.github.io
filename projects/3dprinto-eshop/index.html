@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#11141a" />
+    <meta name="theme-color" content="#0C1117" />
     <meta
       name="description"
       content="3DPrinto eShop — WooCommerce store with custom auto-quoting plugin for a 3D printing studio."
     />
     <title>3DPrinto eShop — Aristotelis Gkouvas</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131B23' stroke='%232C3E4D'/%3E%3Ctext x='16' y='21' font-family='Fira Code,monospace' font-size='13' font-weight='600' text-anchor='middle' fill='%239DBEDB'%3EAG%3C/text%3E%3C/svg%3E" />
     <link rel="canonical" href="https://aristotelisgkouvas.github.io/projects/3dprinto-eshop/" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://aristotelisgkouvas.github.io/projects/3dprinto-eshop/" />
@@ -20,6 +20,12 @@
     <meta name="twitter:title" content="3DPrinto eShop — Aristotelis Gkouvas" />
     <meta name="twitter:description" content="WooCommerce store with custom auto-quoting plugin for a 3D printing studio." />
     <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/projects/3dprinto-home.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&amp;family=Figtree:wght@400;500;600&amp;family=Fira+Code:wght@400;500&amp;display=swap"
+    />
     <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
@@ -30,16 +36,16 @@
           <span class="brand-mark">AG</span>
           <span>Aristotelis Gkouvas</span>
         </a>
-        <nav>
-          <ul class="nav-links" aria-label="Primary">
-            <li><a href="../../#about">About</a></li>
-            <li><a href="../../#experience">Experience</a></li>
-            <li><a href="../../#skills">Skills</a></li>
+        <nav aria-label="Primary">
+          <ul id="primary-nav" class="nav-links">
+            <li><a href="../../#services">Services</a></li>
             <li><a href="../../#work">Work</a></li>
-            <li><a href="../../#contact">Contact</a></li>
+            <li><a href="../../#process">Process</a></li>
+            <li><a href="../../#faq">FAQ</a></li>
+            <li><a href="../../cv/">CV</a></li>
           </ul>
         </nav>
-        <div class="nav-cta"><button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <div class="nav-cta"><button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
               <line class="top" x1="4" y1="6" x2="20" y2="6"/>
               <line class="mid" x1="4" y1="12" x2="20" y2="12"/>
@@ -57,7 +63,7 @@
           Back to all work
         </a>
         <div class="project-meta-row reveal">
-          <span>Project <strong>06</strong></span>
+          <span>Project <strong>08</strong></span>
           <span>Year <strong>2026</strong></span>
           <span>Role <strong>Solo developer</strong></span>
           <span>Status <strong style="color:var(--accent)">Production</strong></span>
@@ -69,11 +75,16 @@
           stack: myDATA invoicing, multi-courier shipping and Viva Wallet
           payments.
         </p>
+        <div class="summary-el reveal" lang="el">
+          <p class="fact-label">Με λίγα λόγια</p>
+          <p>Ηλεκτρονικό κατάστημα για studio τρισδιάστατης εκτύπωσης. Ο πελάτης ανεβάζει το αρχείο του και παίρνει τιμή αμέσως.</p>
+          <p>Συνδεδεμένο με myDATA, ACS, Box Now και Viva Wallet — δηλαδή δουλεύει όπως το χρειάζεται στην πράξη μια ελληνική επιχείρηση.</p>
+        </div>
       </section>
 
       <section class="container reveal">
         <div class="project-cover">
-          <img src="../../assets/projects/3dprinto-home.png" alt="3DPrinto eShop hero with Greek call-to-action" />
+          <img src="../../assets/projects/3dprinto-home.webp" width="1440" height="900" alt="3DPrinto eShop hero with Greek call-to-action" loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -180,20 +191,31 @@
           <span class="section-divider" aria-hidden="true"></span>
         </div>
         <div class="gallery-grid">
-          <a class="gallery-item reveal" href="../../assets/projects/3dprinto/01-home.png" data-caption="Home — Greek hero with upload CTA">
-            <img src="../../assets/projects/3dprinto/01-home.png" alt="Home — Greek hero with upload CTA" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/3dprinto/01-home.webp" data-caption="Home — Greek hero with upload CTA">
+            <img src="../../assets/projects/3dprinto/01-home.webp" width="1440" height="900" alt="Home — Greek hero with upload CTA" loading="lazy" />
             <span class="gallery-caption">Home — Greek hero with upload CTA</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/3dprinto/02-custom-print.png" data-caption="Custom Εκτύπωση — STL drag-and-drop with quote form">
-            <img src="../../assets/projects/3dprinto/02-custom-print.png" alt="Custom Εκτύπωση — STL drag-and-drop with quote form" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/3dprinto/02-custom-print.webp" data-caption="Custom Εκτύπωση — STL drag-and-drop with quote form">
+            <img src="../../assets/projects/3dprinto/02-custom-print.webp" width="1440" height="900" alt="Custom Εκτύπωση — STL drag-and-drop with quote form" loading="lazy" />
             <span class="gallery-caption">Custom <span lang="el">Εκτύπωση</span> — STL drag-and-drop with quote form</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/3dprinto/03-process.png" data-caption="Πώς εκτυπώνουμε — print process explanation page">
-            <img src="../../assets/projects/3dprinto/03-process.png" alt="Πώς εκτυπώνουμε — print process explanation page" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/3dprinto/03-process.webp" data-caption="Πώς εκτυπώνουμε — print process explanation page">
+            <img src="../../assets/projects/3dprinto/03-process.webp" width="1440" height="900" alt="Πώς εκτυπώνουμε — print process explanation page" loading="lazy" />
             <span class="gallery-caption"><span lang="el">Πώς εκτυπώνουμε</span> — print process explanation page</span>
           </a>
         </div>
       </section>
+      <section class="section container">
+        <div class="case-cta reveal">
+          <h2>Θέλετε κάτι αντίστοιχο για την επιχείρησή σας;</h2>
+          <p>Δύο γραμμές για το τι χρειάζεστε — απαντώ εντός 24 ωρών με τα επόμενα βήματα, χωρίς καμία δέσμευση.</p>
+          <div class="hero-actions">
+            <a href="mailto:aristotelisgouvas@gmail.com" class="btn btn-primary">Στείλτε email</a>
+            <a href="../../#work" class="btn btn-ghost">Δείτε όλα τα έργα</a>
+          </div>
+        </div>
+      </section>
+
       <a href="../taverna-karavasilis/" class="container next-project reveal" style="text-decoration:none;display:flex;">
         <p class="eyebrow">Next project</p>
         <h2>Taverna Karavasilis Menu →</h2>

@@ -3,23 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#11141a" />
+    <meta name="theme-color" content="#0C1117" />
     <meta
       name="description"
       content="3D Price Lab — drop-in STL/OBJ/3MF cost calculator with engineering-grade economics."
     />
     <title>3D Price Lab — Aristotelis Gkouvas</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131B23' stroke='%232C3E4D'/%3E%3Ctext x='16' y='21' font-family='Fira Code,monospace' font-size='13' font-weight='600' text-anchor='middle' fill='%239DBEDB'%3EAG%3C/text%3E%3C/svg%3E" />
     <link rel="canonical" href="https://aristotelisgkouvas.github.io/projects/3d-price-lab/" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://aristotelisgkouvas.github.io/projects/3d-price-lab/" />
     <meta property="og:title" content="3D Price Lab — Aristotelis Gkouvas" />
-    <meta property="og:description" content="Drop-in STL/OBJ/3MF cost calculator with engineering-grade economics. MIT licensed." />
+    <meta property="og:description" content="Drop-in STL/OBJ/3MF cost calculator with engineering-grade economics. Runs entirely in the browser." />
     <meta property="og:image" content="https://aristotelisgkouvas.github.io/assets/projects/3dpricelab-home.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="3D Price Lab — Aristotelis Gkouvas" />
-    <meta name="twitter:description" content="Drop-in STL/OBJ/3MF cost calculator with engineering-grade economics. MIT licensed." />
+    <meta name="twitter:description" content="Drop-in STL/OBJ/3MF cost calculator with engineering-grade economics. Runs entirely in the browser." />
     <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/projects/3dpricelab-home.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&amp;family=Figtree:wght@400;500;600&amp;family=Fira+Code:wght@400;500&amp;display=swap"
+    />
     <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
@@ -30,16 +36,16 @@
           <span class="brand-mark">AG</span>
           <span>Aristotelis Gkouvas</span>
         </a>
-        <nav>
-          <ul class="nav-links" aria-label="Primary">
-            <li><a href="../../#about">About</a></li>
-            <li><a href="../../#experience">Experience</a></li>
-            <li><a href="../../#skills">Skills</a></li>
+        <nav aria-label="Primary">
+          <ul id="primary-nav" class="nav-links">
+            <li><a href="../../#services">Services</a></li>
             <li><a href="../../#work">Work</a></li>
-            <li><a href="../../#contact">Contact</a></li>
+            <li><a href="../../#process">Process</a></li>
+            <li><a href="../../#faq">FAQ</a></li>
+            <li><a href="../../cv/">CV</a></li>
           </ul>
         </nav>
-        <div class="nav-cta"><button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <div class="nav-cta"><button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
               <line class="top" x1="4" y1="6" x2="20" y2="6"/>
               <line class="mid" x1="4" y1="12" x2="20" y2="12"/>
@@ -57,10 +63,12 @@
           Back to all work
         </a>
         <div class="project-meta-row reveal">
-          <span>Project <strong>05</strong></span>
+          <span>Project <strong>07</strong></span>
           <span>Year <strong>2026</strong></span>
           <span>Role <strong>Solo</strong></span>
-          <span>Status <strong style="color:var(--accent)">Open source · MIT</strong></span>
+          <!-- "Open source · MIT" without a public repository is a claim the
+               reader cannot verify. Restore it together with the repo link. -->
+          <span>Status <strong style="color:var(--accent)">Personal project</strong></span>
         </div>
         <h1 class="project-title reveal">3D Price Lab.</h1>
         <p class="project-tagline reveal">
@@ -68,11 +76,16 @@
           electricity, labour, machine wear, margin and VAT, in any currency.
           Files stay in the browser.
         </p>
+        <div class="summary-el reveal" lang="el">
+          <p class="fact-label">Με λίγα λόγια</p>
+          <p>Ανεβάζεις ένα αρχείο τρισδιάστατης εκτύπωσης και βγάζει κοστολόγηση που στέκει: υλικό, ρεύμα, εργατικά, φθορά μηχανήματος, κέρδος και ΦΠΑ.</p>
+          <p>Τα αρχεία δεν φεύγουν ποτέ από τον browser σου.</p>
+        </div>
       </section>
 
       <section class="container reveal">
         <div class="project-cover">
-          <img src="../../assets/projects/3dpricelab-home.png" alt="3D Price Lab landing page with hero and receipt mockup" />
+          <img src="../../assets/projects/3dpricelab-home.webp" width="1440" height="900" alt="3D Price Lab landing page with hero and receipt mockup" loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -105,11 +118,11 @@
             <dl>
               <div>
                 <dt>Type</dt>
-                <dd>Web app (open source)</dd>
+                <dd>Web app</dd>
               </div>
               <div>
-                <dt>License</dt>
-                <dd>MIT</dd>
+                <dt>Runs</dt>
+                <dd>Entirely in the browser</dd>
               </div>
               <div>
                 <dt>Privacy</dt>
@@ -184,36 +197,47 @@
           <span class="section-divider" aria-hidden="true"></span>
         </div>
         <div class="gallery-grid">
-          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/01-hero.png" data-caption="Landing — hero with sample receipt">
-            <img src="../../assets/projects/3dpricelab/01-hero.png" alt="Landing — hero with sample receipt" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/01-hero.webp" data-caption="Landing — hero with sample receipt">
+            <img src="../../assets/projects/3dpricelab/01-hero.webp" width="1440" height="900" alt="Landing — hero with sample receipt" loading="lazy" />
             <span class="gallery-caption">Landing — hero with sample receipt</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/02-features.png" data-caption="Features — multi-colour aware, slicer-aware, multi-currency, offline">
-            <img src="../../assets/projects/3dpricelab/02-features.png" alt="Features — multi-colour aware, slicer-aware, multi-currency, offline" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/02-features.webp" data-caption="Features — multi-colour aware, slicer-aware, multi-currency, offline">
+            <img src="../../assets/projects/3dpricelab/02-features.webp" width="1440" height="900" alt="Features — multi-colour aware, slicer-aware, multi-currency, offline" loading="lazy" />
             <span class="gallery-caption">Features — multi-colour aware, slicer-aware, multi-currency, offline</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/03-pricing.png" data-caption="Pricing — Free / Pro / Team tiers">
-            <img src="../../assets/projects/3dpricelab/03-pricing.png" alt="Pricing — Free / Pro / Team tiers" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/03-pricing.webp" data-caption="Pricing — Free / Pro / Team tiers">
+            <img src="../../assets/projects/3dpricelab/03-pricing.webp" width="1440" height="900" alt="Pricing — Free / Pro / Team tiers" loading="lazy" />
             <span class="gallery-caption">Pricing — Free / Pro / Team tiers</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/04-auth.png" data-caption="Sign in — local-only auth, data stays in the browser">
-            <img src="../../assets/projects/3dpricelab/04-auth.png" alt="Sign in — local-only auth" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/04-auth.webp" data-caption="Sign in — local-only auth, data stays in the browser">
+            <img src="../../assets/projects/3dpricelab/04-auth.webp" width="1440" height="900" alt="Sign in — local-only auth" loading="lazy" />
             <span class="gallery-caption">Sign in — local-only auth</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/05-calculator-empty.png" data-caption="Calculator — full UI before any model is dropped">
-            <img src="../../assets/projects/3dpricelab/05-calculator-empty.png" alt="Calculator — full UI before any model is dropped" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/05-calculator-empty.webp" data-caption="Calculator — full UI before any model is dropped">
+            <img src="../../assets/projects/3dpricelab/05-calculator-empty.webp" width="1440" height="900" alt="Calculator — full UI before any model is dropped" loading="lazy" />
             <span class="gallery-caption">Calculator — empty state</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/06-calculator-loaded.png" data-caption="Loaded 3MF — multi-colour model with 4 filaments, total €40.39">
-            <img src="../../assets/projects/3dpricelab/06-calculator-loaded.png" alt="Loaded 3MF — multi-colour model" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/06-calculator-loaded.webp" data-caption="Loaded 3MF — multi-colour model with 4 filaments, total €40.39">
+            <img src="../../assets/projects/3dpricelab/06-calculator-loaded.webp" width="1440" height="900" alt="Loaded 3MF — multi-colour model" loading="lazy" />
             <span class="gallery-caption">Loaded 3MF — 4-filament breakdown</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/07-profile.png" data-caption="Profile &amp; settings — account, password, custom materials">
-            <img src="../../assets/projects/3dpricelab/07-profile.png" alt="Profile and settings page" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/3dpricelab/07-profile.webp" data-caption="Profile &amp; settings — account, password, custom materials">
+            <img src="../../assets/projects/3dpricelab/07-profile.webp" width="1440" height="900" alt="Profile and settings page" loading="lazy" />
             <span class="gallery-caption">Profile &amp; settings</span>
           </a>
         </div>
       </section>
+      <section class="section container">
+        <div class="case-cta reveal">
+          <h2>Θέλετε κάτι αντίστοιχο για την επιχείρησή σας;</h2>
+          <p>Δύο γραμμές για το τι χρειάζεστε — απαντώ εντός 24 ωρών με τα επόμενα βήματα, χωρίς καμία δέσμευση.</p>
+          <div class="hero-actions">
+            <a href="mailto:aristotelisgouvas@gmail.com" class="btn btn-primary">Στείλτε email</a>
+            <a href="../../#work" class="btn btn-ghost">Δείτε όλα τα έργα</a>
+          </div>
+        </div>
+      </section>
+
               <a href="../3dprinto-eshop/" class="container next-project reveal" style="text-decoration:none;display:flex;">
         <p class="eyebrow">Next project</p>
         <h2>3DPrinto eShop →</h2>

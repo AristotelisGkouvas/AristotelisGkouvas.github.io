@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#11141a" />
+    <meta name="theme-color" content="#0C1117" />
     <meta
       name="description"
       content="Taverna Karavasilis Menu — bilingual mobile-first digital menu for a Greek tavern, deployed on Cloudflare Pages."
     />
     <title>Taverna Karavasilis — Aristotelis Gkouvas</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131B23' stroke='%232C3E4D'/%3E%3Ctext x='16' y='21' font-family='Fira Code,monospace' font-size='13' font-weight='600' text-anchor='middle' fill='%239DBEDB'%3EAG%3C/text%3E%3C/svg%3E" />
 
     <link rel="canonical" href="https://aristotelisgkouvas.github.io/projects/taverna-karavasilis/" />
     <meta property="og:type" content="article" />
@@ -22,6 +22,12 @@
     <meta name="twitter:description" content="Mobile-first digital menu for a Greek tavern with bilingual support, theme switching and Cloudflare Pages deployment." />
     <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/projects/taverna/cover.png" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&amp;family=Figtree:wght@400;500;600&amp;family=Fira+Code:wght@400;500&amp;display=swap"
+    />
     <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
@@ -33,17 +39,17 @@
           <span class="brand-mark">AG</span>
           <span>Aristotelis Gkouvas</span>
         </a>
-        <nav>
-          <ul class="nav-links" aria-label="Primary">
-            <li><a href="../../#about">About</a></li>
-            <li><a href="../../#experience">Experience</a></li>
-            <li><a href="../../#skills">Skills</a></li>
+        <nav aria-label="Primary">
+          <ul id="primary-nav" class="nav-links">
+            <li><a href="../../#services">Services</a></li>
             <li><a href="../../#work">Work</a></li>
-            <li><a href="../../#contact">Contact</a></li>
+            <li><a href="../../#process">Process</a></li>
+            <li><a href="../../#faq">FAQ</a></li>
+            <li><a href="../../cv/">CV</a></li>
           </ul>
         </nav>
         <div class="nav-cta">
-          <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
               <line class="top" x1="4" y1="6" x2="20" y2="6"/>
               <line class="mid" x1="4" y1="12" x2="20" y2="12"/>
@@ -61,7 +67,7 @@
           Back to all work
         </a>
         <div class="project-meta-row reveal">
-          <span>Project <strong>07</strong></span>
+          <span>Project <strong>09</strong></span>
           <span>Year <strong>2026</strong></span>
           <span>Role <strong>Solo developer</strong></span>
           <span>Status <strong style="color:var(--accent)">Live</strong></span>
@@ -72,6 +78,11 @@
           GR&nbsp;/&nbsp;EN, light&nbsp;/&nbsp;dark theme, and a snappy category
           navigation — all deployed for free on Cloudflare Pages.
         </p>
+        <div class="summary-el reveal" lang="el">
+          <p class="fact-label">Με λίγα λόγια</p>
+          <p>Ψηφιακός κατάλογος για ταβέρνα, φτιαγμένος πρώτα για κινητό. Ελληνικά και αγγλικά, φωτεινό και σκούρο θέμα.</p>
+          <p>Δεν κοστίζει τίποτα στον ιδιοκτήτη να τον έχει online — μηδέν μηνιαία συνδρομή.</p>
+        </div>
         <p class="reveal" style="margin-top:1rem;">
           <a class="btn-link" href="https://taverna-karavasilis-menu.pages.dev/" target="_blank" rel="noopener">
             Visit live site
@@ -86,7 +97,7 @@
 
       <section class="container reveal">
         <div class="project-cover">
-          <img src="../../assets/projects/taverna/cover.png" alt="Three phone mockups showing the Taverna Karavasilis menu in light EN, dark EN and dark GR modes" />
+          <img src="../../assets/projects/taverna/cover.webp" width="1440" height="900" alt="Three phone mockups showing the Taverna Karavasilis menu in light EN, dark EN and dark GR modes" loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -193,33 +204,44 @@
           <span class="section-divider" aria-hidden="true"></span>
         </div>
         <div class="gallery-grid">
-          <a class="gallery-item reveal" href="../../assets/projects/taverna/01-hero.png" data-caption="Hero — light theme, English locale">
-            <img src="../../assets/projects/taverna/01-hero.png" alt="Hero — light theme, English locale" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/taverna/01-hero.webp" data-caption="Hero — light theme, English locale">
+            <img src="../../assets/projects/taverna/01-hero.webp" width="828" height="1792" alt="Hero — light theme, English locale" loading="lazy" />
             <span class="gallery-caption">Hero — light theme, EN locale</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/taverna/02-starters.png" data-caption="Starters — sticky category bar follows the scroll">
-            <img src="../../assets/projects/taverna/02-starters.png" alt="Starters with sticky category bar" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/taverna/02-starters.webp" data-caption="Starters — sticky category bar follows the scroll">
+            <img src="../../assets/projects/taverna/02-starters.webp" width="828" height="1792" alt="Starters with sticky category bar" loading="lazy" />
             <span class="gallery-caption">Starters — sticky category bar</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/taverna/03-cooked.png" data-caption="Cooked, fried &amp; grill — items priced or marked &quot;ask staff&quot;">
-            <img src="../../assets/projects/taverna/03-cooked.png" alt="Cooked, fried and grill sections" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/taverna/03-cooked.webp" data-caption="Cooked, fried &amp; grill — items priced or marked &quot;ask staff&quot;">
+            <img src="../../assets/projects/taverna/03-cooked.webp" width="828" height="1792" alt="Cooked, fried and grill sections" loading="lazy" />
             <span class="gallery-caption">Cooked / fried / grill — long-form list</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/taverna/04-dark.png" data-caption="Dark theme — terracotta on charcoal, same serif identity">
-            <img src="../../assets/projects/taverna/04-dark.png" alt="Dark theme — terracotta on charcoal" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/taverna/04-dark.webp" data-caption="Dark theme — terracotta on charcoal, same serif identity">
+            <img src="../../assets/projects/taverna/04-dark.webp" width="828" height="1792" alt="Dark theme — terracotta on charcoal" loading="lazy" />
             <span class="gallery-caption">Dark theme — terracotta on charcoal</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/taverna/05-greek.png" data-caption="Greek locale — Παραδοσιακή κουζίνα, ΟΡΕΚΤΙΚΑ / ΣΑΛΑΤΕΣ / ΠΙΤΕΣ">
-            <img src="../../assets/projects/taverna/05-greek.png" alt="Greek locale — Παραδοσιακή κουζίνα" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/taverna/05-greek.webp" data-caption="Greek locale — Παραδοσιακή κουζίνα, ΟΡΕΚΤΙΚΑ / ΣΑΛΑΤΕΣ / ΠΙΤΕΣ">
+            <img src="../../assets/projects/taverna/05-greek.webp" width="828" height="1792" alt="Greek locale — Παραδοσιακή κουζίνα" loading="lazy" />
             <span class="gallery-caption">Greek locale — <span lang="el">Παραδοσιακή κουζίνα</span></span>
           </a>
         </div>
       </section>
 
-      <a href="../lumap/" class="container next-project reveal" style="text-decoration:none;display:flex;">
+      <section class="section container">
+        <div class="case-cta reveal">
+          <h2>Θέλετε κάτι αντίστοιχο για την επιχείρησή σας;</h2>
+          <p>Δύο γραμμές για το τι χρειάζεστε — απαντώ εντός 24 ωρών με τα επόμενα βήματα, χωρίς καμία δέσμευση.</p>
+          <div class="hero-actions">
+            <a href="mailto:aristotelisgouvas@gmail.com" class="btn btn-primary">Στείλτε email</a>
+            <a href="../../#work" class="btn btn-ghost">Δείτε όλα τα έργα</a>
+          </div>
+        </div>
+      </section>
+
+      <a href="../loukoumi/" class="container next-project reveal" style="text-decoration:none;display:flex;">
         <p class="eyebrow">Next project</p>
-        <h2>Lumap →</h2>
-        <p class="muted">GIS platform mapping a municipality&#39;s entire street-lighting network.</p>
+        <h2>Loukoumi →</h2>
+        <p class="muted">Sponsorship matchmaking for Greek cultural associations.</p>
       </a>
     </main>
 

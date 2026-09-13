@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#11141a" />
+    <meta name="theme-color" content="#0C1117" />
     <meta
       name="description"
       content="Tank 3 Dashboard — real-time monitoring & 3D visualisation for an LNG storage tank."
     />
     <title>Tank 3 Dashboard — Aristotelis Gkouvas</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131B23' stroke='%232C3E4D'/%3E%3Ctext x='16' y='21' font-family='Fira Code,monospace' font-size='13' font-weight='600' text-anchor='middle' fill='%239DBEDB'%3EAG%3C/text%3E%3C/svg%3E" />
     <link rel="canonical" href="https://aristotelisgkouvas.github.io/projects/tank-3-dashboard/" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://aristotelisgkouvas.github.io/projects/tank-3-dashboard/" />
@@ -20,6 +20,12 @@
     <meta name="twitter:title" content="Tank 3 Dashboard — Aristotelis Gkouvas" />
     <meta name="twitter:description" content="Real-time monitoring & 3D visualisation for an LNG storage tank with thermal heatmap." />
     <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/projects/tank-3d.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&amp;family=Figtree:wght@400;500;600&amp;family=Fira+Code:wght@400;500&amp;display=swap"
+    />
     <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
@@ -30,16 +36,16 @@
           <span class="brand-mark">AG</span>
           <span>Aristotelis Gkouvas</span>
         </a>
-        <nav>
-          <ul class="nav-links" aria-label="Primary">
-            <li><a href="../../#about">About</a></li>
-            <li><a href="../../#experience">Experience</a></li>
-            <li><a href="../../#skills">Skills</a></li>
+        <nav aria-label="Primary">
+          <ul id="primary-nav" class="nav-links">
+            <li><a href="../../#services">Services</a></li>
             <li><a href="../../#work">Work</a></li>
-            <li><a href="../../#contact">Contact</a></li>
+            <li><a href="../../#process">Process</a></li>
+            <li><a href="../../#faq">FAQ</a></li>
+            <li><a href="../../cv/">CV</a></li>
           </ul>
         </nav>
-        <div class="nav-cta"><button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <div class="nav-cta"><button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
               <line class="top" x1="4" y1="6" x2="20" y2="6"/>
               <line class="mid" x1="4" y1="12" x2="20" y2="12"/>
@@ -57,7 +63,7 @@
           Back to all work
         </a>
         <div class="project-meta-row reveal">
-          <span>Project <strong>04</strong></span>
+          <span>Project <strong>06</strong></span>
           <span>Year <strong>2025 — present</strong></span>
           <span>Role <strong>Full-stack dev</strong></span>
           <span>Status <strong style="color:var(--accent)">Production</strong></span>
@@ -65,14 +71,19 @@
         <h1 class="project-title reveal">Tank 3 Dashboard.</h1>
         <p class="project-tagline reveal">
           Real-time monitoring &amp; 3D visualisation for an LNG storage tank —
-          190+ thermistors, tiltmeters, seismic and inclinometer sensors, with
+          189 thermistors, tiltmeters, seismic and inclinometer sensors, with
           a Three.js scene that turns sensor data into a live thermal heatmap.
         </p>
+        <div class="summary-el reveal" lang="el">
+          <p class="fact-label">Με λίγα λόγια</p>
+          <p>Σύστημα παρακολούθησης για δεξαμενή υγροποιημένου φυσικού αερίου: 190+ αισθητήρες πάνω σε τρισδιάστατο μοντέλο, με χρωματικό χάρτη θερμοκρασιών και ειδοποιήσεις.</p>
+          <p>Ο χειριστής βλέπει με μια ματιά αν η δεξαμενή είναι υγιής, αντί να διαβάζει πίνακες με νούμερα.</p>
+        </div>
       </section>
 
       <section class="container reveal">
         <div class="project-cover">
-          <img src="../../assets/projects/tank-3d.png" alt="3D tank model with thermal heatmap and sensor markers" />
+          <img src="../../assets/projects/tank-3d.webp" width="1440" height="900" alt="3D tank model with thermal heatmap and sensor markers" loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -112,11 +123,11 @@
               </div>
               <div>
                 <dt>Client</dt>
-                <dd>LNG storage operator (DESFA)</dd>
+                <dd>LNG terminal operator <span class="muted">— named on request</span></dd>
               </div>
               <div>
                 <dt>Sensors</dt>
-                <dd>190+ across 4 categories</dd>
+                <dd>189 across 4 categories</dd>
               </div>
               <div>
                 <dt>Stack</dt>
@@ -187,29 +198,48 @@
           <h2 class="h-section">Screens</h2>
           <span class="section-divider" aria-hidden="true"></span>
         </div>
+        <p class="data-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>
+            Operator branding has been removed from these screenshots and the
+            client is not named. Instrument tags follow the ISA-5.1 convention
+            every tank farm uses and identify nothing on their own.
+          </span>
+        </p>
         <div class="gallery-grid">
-          <a class="gallery-item reveal" href="../../assets/projects/tank/01-overview.png" data-caption="Overview — sensor health summary and recent alarms">
-            <img src="../../assets/projects/tank/01-overview.png" alt="Overview — sensor health summary and recent alarms" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/tank/01-overview.webp" data-caption="Overview — sensor health summary and recent alarms">
+            <img src="../../assets/projects/tank/01-overview.webp" width="1440" height="900" alt="Overview — sensor health summary and recent alarms" loading="lazy" />
             <span class="gallery-caption">Overview — sensor health summary and recent alarms</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/tank/02-3d-heatmap.png" data-caption="3D Tank — Three.js scene with thermal heatmap shader">
-            <img src="../../assets/projects/tank/02-3d-heatmap.png" alt="3D Tank — Three.js scene with thermal heatmap shader" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/tank/02-3d-heatmap.webp" data-caption="3D Tank — Three.js scene with thermal heatmap shader">
+            <img src="../../assets/projects/tank/02-3d-heatmap.webp" width="1440" height="900" alt="3D Tank — Three.js scene with thermal heatmap shader" loading="lazy" />
             <span class="gallery-caption">3D Tank — Three.js scene with thermal heatmap shader</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/tank/03-charts.png" data-caption="Charts — multi-sensor history with selectable time ranges">
-            <img src="../../assets/projects/tank/03-charts.png" alt="Charts — multi-sensor history with selectable time ranges" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/tank/03-charts.webp" data-caption="Charts — multi-sensor history with selectable time ranges">
+            <img src="../../assets/projects/tank/03-charts.webp" width="1440" height="900" alt="Charts — multi-sensor history with selectable time ranges" loading="lazy" />
             <span class="gallery-caption">Charts — multi-sensor history with selectable time ranges</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/tank/04-alarms.png" data-caption="Alarms — full alarm log with status and severity">
-            <img src="../../assets/projects/tank/04-alarms.png" alt="Alarms — full alarm log with status and severity" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/tank/04-alarms.webp" data-caption="Alarms — full alarm log with status and severity">
+            <img src="../../assets/projects/tank/04-alarms.webp" width="1440" height="900" alt="Alarms — full alarm log with status and severity" loading="lazy" />
             <span class="gallery-caption">Alarms — full alarm log with status and severity</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/tank/05-sensors.png" data-caption="Sensors — 189-sensor table with last reading and status">
-            <img src="../../assets/projects/tank/05-sensors.png" alt="Sensors — 189-sensor table with last reading and status" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/tank/05-sensors.webp" data-caption="Sensors — 189-sensor table with last reading and status">
+            <img src="../../assets/projects/tank/05-sensors.webp" width="1440" height="900" alt="Sensors — 189-sensor table with last reading and status" loading="lazy" />
             <span class="gallery-caption">Sensors — 189-sensor table with last reading and status</span>
           </a>
         </div>
       </section>
+      <section class="section container">
+        <div class="case-cta reveal">
+          <h2>Θέλετε κάτι αντίστοιχο για την επιχείρησή σας;</h2>
+          <p>Δύο γραμμές για το τι χρειάζεστε — απαντώ εντός 24 ωρών με τα επόμενα βήματα, χωρίς καμία δέσμευση.</p>
+          <div class="hero-actions">
+            <a href="mailto:aristotelisgouvas@gmail.com" class="btn btn-primary">Στείλτε email</a>
+            <a href="../../#work" class="btn btn-ghost">Δείτε όλα τα έργα</a>
+          </div>
+        </div>
+      </section>
+
               <a href="../3d-price-lab/" class="container next-project reveal" style="text-decoration:none;display:flex;">
         <p class="eyebrow">Next project</p>
         <h2>3D Price Lab →</h2>

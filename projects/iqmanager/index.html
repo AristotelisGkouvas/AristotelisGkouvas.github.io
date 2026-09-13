@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#11141a" />
+    <meta name="theme-color" content="#0C1117" />
     <meta
       name="description"
       content="IQManager — full-stack ERP & ticketing platform. Next.js + Django + PostgreSQL."
     />
     <title>IQManager — Aristotelis Gkouvas</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131B23' stroke='%232C3E4D'/%3E%3Ctext x='16' y='21' font-family='Fira Code,monospace' font-size='13' font-weight='600' text-anchor='middle' fill='%239DBEDB'%3EAG%3C/text%3E%3C/svg%3E" />
     <link rel="canonical" href="https://aristotelisgkouvas.github.io/projects/iqmanager/" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://aristotelisgkouvas.github.io/projects/iqmanager/" />
@@ -20,6 +20,12 @@
     <meta name="twitter:title" content="IQManager — Aristotelis Gkouvas" />
     <meta name="twitter:description" content="Full-stack ERP & ticketing platform built on Next.js, Django REST and PostgreSQL." />
     <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/projects/iqmanager.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&amp;family=Figtree:wght@400;500;600&amp;family=Fira+Code:wght@400;500&amp;display=swap"
+    />
     <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
@@ -30,16 +36,16 @@
           <span class="brand-mark">AG</span>
           <span>Aristotelis Gkouvas</span>
         </a>
-        <nav>
-          <ul class="nav-links" aria-label="Primary">
-            <li><a href="../../#about">About</a></li>
-            <li><a href="../../#experience">Experience</a></li>
-            <li><a href="../../#skills">Skills</a></li>
+        <nav aria-label="Primary">
+          <ul id="primary-nav" class="nav-links">
+            <li><a href="../../#services">Services</a></li>
             <li><a href="../../#work">Work</a></li>
-            <li><a href="../../#contact">Contact</a></li>
+            <li><a href="../../#process">Process</a></li>
+            <li><a href="../../#faq">FAQ</a></li>
+            <li><a href="../../cv/">CV</a></li>
           </ul>
         </nav>
-        <div class="nav-cta"><button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <div class="nav-cta"><button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
               <line class="top" x1="4" y1="6" x2="20" y2="6"/>
               <line class="mid" x1="4" y1="12" x2="20" y2="12"/>
@@ -57,7 +63,7 @@
           Back to all work
         </a>
         <div class="project-meta-row reveal">
-          <span>Project <strong>03</strong></span>
+          <span>Project <strong>05</strong></span>
           <span>Year <strong>2024 — present</strong></span>
           <span>Role <strong>Sole full-stack dev</strong></span>
           <span>Status <strong style="color:var(--accent)">Production</strong></span>
@@ -68,11 +74,16 @@
           field-services business — customers, contracts, tickets, warehouse,
           timesheets and invoicing, all in one system.
         </p>
+        <div class="summary-el reveal" lang="el">
+          <p class="fact-label">Με λίγα λόγια</p>
+          <p>Το σύστημα που τρέχει ολόκληρη την εταιρεία: πελάτες, συμβόλαια, δελτία εργασίας, αποθήκη, ώρες προσωπικού και τιμολόγηση σε ένα σημείο.</p>
+          <p>Αντικατέστησε ένα μείγμα από excel, χαρτιά και τηλέφωνα. Σε καθημερινή παραγωγική χρήση.</p>
+        </div>
       </section>
 
       <section class="container reveal">
         <div class="project-cover">
-          <img src="../../assets/projects/iqmanager.png" alt="IQManager dashboard with stats, low-stock alerts and recent tickets" />
+          <img src="../../assets/projects/iqmanager.webp" width="1440" height="900" alt="IQManager dashboard with stats, low-stock alerts and recent tickets" loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -188,37 +199,52 @@
           <h2 class="h-section">Screens</h2>
           <span class="section-divider" aria-hidden="true"></span>
         </div>
+        <p class="data-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Every company, contact and figure in these screenshots comes from a seeded demo dataset, not from the live tenant. No real customer data appears anywhere on this page.</span>
+        </p>
         <div class="gallery-grid">
-          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/01-dashboard.png" data-caption="Dashboard — stats, low-stock alerts, recent tickets">
-            <img src="../../assets/projects/iqmanager/01-dashboard.png" alt="Dashboard — stats, low-stock alerts, recent tickets" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/01-dashboard.webp" data-caption="Dashboard — stats, low-stock alerts, recent tickets">
+            <img src="../../assets/projects/iqmanager/01-dashboard.webp" width="1440" height="900" alt="Dashboard — stats, low-stock alerts, recent tickets" loading="lazy" />
             <span class="gallery-caption">Dashboard — stats, low-stock alerts, recent tickets</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/02-customers.png" data-caption="Customers — 100+ companies with type/country/status filters">
-            <img src="../../assets/projects/iqmanager/02-customers.png" alt="Customers — 100+ companies with type/country/status filters" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/02-customers.webp" data-caption="Customers — 100+ companies with type/country/status filters">
+            <img src="../../assets/projects/iqmanager/02-customers.webp" width="1440" height="900" alt="Customers — 100+ companies with type/country/status filters" loading="lazy" />
             <span class="gallery-caption">Customers — 100+ companies with type/country/status filters</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/03-tickets.png" data-caption="Tickets — searchable list with status, priority, assignee">
-            <img src="../../assets/projects/iqmanager/03-tickets.png" alt="Tickets — searchable list with status, priority, assignee" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/03-tickets.webp" data-caption="Tickets — searchable list with status, priority, assignee">
+            <img src="../../assets/projects/iqmanager/03-tickets.webp" width="1440" height="900" alt="Tickets — searchable list with status, priority, assignee" loading="lazy" />
             <span class="gallery-caption">Tickets — searchable list with status, priority, assignee</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/04-contracts.png" data-caption="Contracts — service / maintenance contracts with renewal tracking">
-            <img src="../../assets/projects/iqmanager/04-contracts.png" alt="Contracts — renewal tracking" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/04-contracts.webp" data-caption="Contracts — service / maintenance contracts with renewal tracking">
+            <img src="../../assets/projects/iqmanager/04-contracts.webp" width="1440" height="900" alt="Contracts — renewal tracking" loading="lazy" />
             <span class="gallery-caption">Contracts — renewal tracking</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/05-tcbs.png" data-caption="TCBs / Hardware — fleet of devices with brand, type, status, site">
-            <img src="../../assets/projects/iqmanager/05-tcbs.png" alt="TCBs / Hardware fleet" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/05-tcbs.webp" data-caption="TCBs / Hardware — fleet of devices with brand, type, status, site">
+            <img src="../../assets/projects/iqmanager/05-tcbs.webp" width="1440" height="900" alt="TCBs / Hardware fleet" loading="lazy" />
             <span class="gallery-caption">Hardware fleet — TCBs by site</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/06-warehouse.png" data-caption="Warehouse — Storage Items grouped by category with low-stock badges">
-            <img src="../../assets/projects/iqmanager/06-warehouse.png" alt="Warehouse — Storage Items" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/06-warehouse.webp" data-caption="Warehouse — Storage Items grouped by category with low-stock badges">
+            <img src="../../assets/projects/iqmanager/06-warehouse.webp" width="1440" height="900" alt="Warehouse — Storage Items" loading="lazy" />
             <span class="gallery-caption">Warehouse — storage items by category</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/07-invoicing.png" data-caption="Invoicing — issued / received invoices with payment status">
-            <img src="../../assets/projects/iqmanager/07-invoicing.png" alt="Invoicing — invoices and payment status" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/iqmanager/07-invoicing.webp" data-caption="Invoicing — issued / received invoices with payment status">
+            <img src="../../assets/projects/iqmanager/07-invoicing.webp" width="1440" height="900" alt="Invoicing — invoices and payment status" loading="lazy" />
             <span class="gallery-caption">Invoicing — payment status &amp; myDATA</span>
           </a>
         </div>
       </section>
+      <section class="section container">
+        <div class="case-cta reveal">
+          <h2>Θέλετε κάτι αντίστοιχο για την επιχείρησή σας;</h2>
+          <p>Δύο γραμμές για το τι χρειάζεστε — απαντώ εντός 24 ωρών με τα επόμενα βήματα, χωρίς καμία δέσμευση.</p>
+          <div class="hero-actions">
+            <a href="mailto:aristotelisgouvas@gmail.com" class="btn btn-primary">Στείλτε email</a>
+            <a href="../../#work" class="btn btn-ghost">Δείτε όλα τα έργα</a>
+          </div>
+        </div>
+      </section>
+
               <a href="../tank-3-dashboard/" class="container next-project reveal" style="text-decoration:none;display:flex;">
         <p class="eyebrow">Next project</p>
         <h2>Tank 3 Dashboard →</h2>

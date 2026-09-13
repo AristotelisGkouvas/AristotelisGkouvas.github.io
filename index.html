@@ -1,30 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="el" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#11141a" />
+    <meta name="theme-color" content="#0C1117" />
     <meta
       name="description"
-      content="Aristotelis Gkouvas — full-stack developer building ERPs, industrial dashboards and 3D printing tools."
+      content="Αριστοτέλης Γκούβας — full-stack developer. Web εφαρμογές, ERP, e-shops και βιομηχανικά dashboards που τρέχουν σε παραγωγή σε πραγματικές επιχειρήσεις."
     />
     <title>Aristotelis Gkouvas — Full-stack Developer</title>
 
     <link rel="canonical" href="https://aristotelisgkouvas.github.io/" />
+    <link rel="alternate" hreflang="el" href="https://aristotelisgkouvas.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://aristotelisgkouvas.github.io/?lang=en" />
+    <link rel="alternate" hreflang="x-default" href="https://aristotelisgkouvas.github.io/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://aristotelisgkouvas.github.io/" />
     <meta property="og:title" content="Aristotelis Gkouvas — Full-stack Developer" />
-    <meta property="og:description" content="Full-stack developer building ERPs, industrial dashboards and 3D printing tools — Next.js, Django, Three.js." />
+    <meta property="og:description" content="Software that runs every day inside real businesses — web apps, ERPs, e-shops and industrial dashboards, built end-to-end." />
     <meta property="og:image" content="https://aristotelisgkouvas.github.io/assets/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content="el_GR" />
+    <meta property="og:locale:alternate" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Aristotelis Gkouvas — Full-stack Developer" />
-    <meta name="twitter:description" content="Full-stack developer building ERPs, industrial dashboards and 3D printing tools." />
+    <meta name="twitter:description" content="Software that runs every day inside real businesses — web apps, ERPs, e-shops and industrial dashboards." />
     <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/og-image.png" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131B23' stroke='%232C3E4D'/%3E%3Ctext x='16' y='21' font-family='Fira Code,monospace' font-size='13' font-weight='600' text-anchor='middle' fill='%239DBEDB'%3EAG%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://ghchart.rshah.org" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&amp;family=Figtree:wght@400;500;600&amp;family=Fira+Code:wght@400;500&amp;display=swap"
+    />
     <link rel="stylesheet" href="./style.css" />
 
     <script type="application/ld+json">
@@ -37,7 +47,7 @@
         "image": "https://aristotelisgkouvas.github.io/assets/profile-pic2.png",
         "email": "mailto:aristotelisgouvas@gmail.com",
         "jobTitle": "Full-stack Developer",
-        "description": "Full-stack developer building ERPs, industrial dashboards, GIS platforms and 3D printing tools — Next.js, Django, Three.js.",
+        "description": "Full-stack developer building ERPs, industrial dashboards, GIS platforms, e-shops and SaaS products — Django, Next.js, Three.js.",
         "worksFor": { "@type": "Organization", "name": "IQsoft" },
         "alumniOf": {
           "@type": "CollegeOrUniversity",
@@ -52,7 +62,7 @@
         "knowsLanguage": ["el", "en"],
         "knowsAbout": [
           "Django", "Django REST Framework", "Next.js", "React", "TypeScript",
-          "Three.js", "WebGL", "FastAPI", "PostgreSQL", "PostGIS", "Docker"
+          "Three.js", "WebGL", "FastAPI", "PostgreSQL", "PostGIS", "WooCommerce", "Docker"
         ],
         "sameAs": [
           "https://github.com/AristotelisGkouvas",
@@ -61,28 +71,33 @@
       }
     </script>
   </head>
-  <body>
-    <a href="#main" class="skip-link">Skip to content</a>
+  <body class="home">
+    <a href="#main" class="skip-link" data-i18n="skip">Μετάβαση στο περιεχόμενο</a>
 
     <header class="site-header">
       <div class="container nav">
-        <a href="#" class="brand" aria-label="Home">
+        <a href="#main" class="brand" aria-label="Home">
           <span class="brand-mark">AG</span>
           <span>Aristotelis Gkouvas</span>
         </a>
 
-        <nav>
-          <ul class="nav-links" aria-label="Primary">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <nav aria-label="Primary">
+          <ul id="primary-nav" class="nav-links">
+            <li><a href="#services" data-i18n="navServices">Υπηρεσίες</a></li>
+            <li><a href="#work" data-i18n="navWork">Έργα</a></li>
+            <li><a href="#process" data-i18n="navProcess">Διαδικασία</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="./cv/">CV</a></li>
           </ul>
         </nav>
 
         <div class="nav-cta">
-<button
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" data-lang="el" aria-pressed="true" lang="el">ΕΛ</button>
+            <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+          </div>
+          <a href="#contact" class="nav-cta-link" data-i18n="navCta">Επικοινωνία</a>
+          <button
             class="icon-btn menu-toggle"
             type="button"
             aria-label="Open menu"
@@ -99,488 +114,369 @@
       </div>
     </header>
 
-    <main id="main">
-      <section class="hero container">
-        <div class="hero-status reveal">
-          <span class="dot" aria-hidden="true"></span>
-          Available for new projects
-        </div>
-        <p class="hero-greet reveal">// Hi, my name is</p>
-        <h1 class="hero-title h-display reveal">Aristotelis Gkouvas.</h1>
-        <p class="hero-role reveal">
-          I build <span class="accent" data-roles='["full-stack web apps","industrial dashboards","3D printing tools","internal tooling"]'>full-stack web apps</span>.
-        </p>
-        <p class="lead hero-desc reveal">
-          Computer Science undergrad at the University of Ioannina shipping
-          production software end-to-end — from Django/Postgres backends to
-          Three.js front-ends. I like making complex domains feel simple.
-        </p>
-        <div class="hero-actions reveal">
-          <a href="#work" class="btn btn-primary">
-            View work
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
-        </div>
-        <dl class="hero-stats reveal">
-          <div>
-            <dt class="hero-stat-num">7</dt>
-            <dd class="hero-stat-label">Shipped projects</dd>
-          </div>
-          <div>
-            <dt class="hero-stat-num">3 yrs</dt>
-            <dd class="hero-stat-label">Coding professionally</dd>
-          </div>
-          <div>
-            <dt class="hero-stat-num">15+</dt>
-            <dd class="hero-stat-label">Languages &amp; frameworks</dd>
-          </div>
-        </dl>
-      </section>
+    <main id="main" class="container">
 
-      <section id="about" class="section container">
-        <div class="section-head reveal">
-          <span class="section-num">01.</span>
-          <h2 class="h-section">About</h2>
-          <span class="section-divider" aria-hidden="true"></span>
-        </div>
-        <div class="about-grid">
-          <div class="about-prose reveal">
-            <p>
-              Hello! I'm <strong>Aris</strong>, a Computer Science &amp; Engineering
-              undergrad at the University of Ioannina and a full-stack developer at
-              <strong>IQsoft</strong> in Greece.
-            </p>
-            <p>
-              Day to day I work on <strong>IQManager</strong> — a Next.js + Django ERP
-              that runs the field-services side of the company — and on
-              <strong>Tank 3 Dashboard</strong>, a real-time monitoring system for an
-              LNG storage tank with hundreds of sensors.
-            </p>
-            <p>
-              Alongside those I built <strong>Lumap</strong>, a PostGIS platform that
-              maps a municipality's whole street-lighting network, and
-              <strong lang="el">ΠείτεCheese</strong>, a live SaaS product that collects every
-              guest's photos at an event behind a single QR code. Plus smaller tools
-              for 3D printing and a Greek-market e-shop.
-            </p>
-            <p>
-              Outside of code I run, cycle and play football. I'm happiest when a
-              messy real-world problem turns into something a non-technical user
-              can pick up without a manual.
-            </p>
-
-            <div class="about-facts">
-              <div>
-                <p class="fact-label">Education</p>
-                <p class="fact-value">BSc Computer Science &amp; Engineering</p>
-                <p class="fact-sub">University of Ioannina · 2021 — present</p>
-              </div>
-              <div>
-                <p class="fact-label">Languages</p>
-                <p class="fact-value">Greek <span class="muted">— native</span></p>
-                <p class="fact-value">English <span class="muted">— fluent (C1)</span></p>
-              </div>
-              <div>
-                <p class="fact-label">Based in</p>
-                <p class="fact-value">Ioannina, Greece</p>
-                <p class="fact-sub">Open to remote &amp; hybrid roles</p>
-              </div>
-            </div>
-
-            <!-- Third-party image. If the service is down, drop the whole block
-                 rather than leave a broken graph on the page. It can't start
-                 hidden: a display:none image never triggers its lazy load. -->
-            <div class="github-graph reveal">
-              <p class="fact-label">Recent GitHub activity</p>
-              <a
-                href="https://github.com/AristotelisGkouvas"
-                target="_blank"
-                rel="noopener"
-                aria-label="Open my GitHub profile"
-              >
-                <img
-                  src="https://ghchart.rshah.org/49d28a/AristotelisGkouvas"
-                  alt="GitHub contributions for AristotelisGkouvas"
-                  loading="lazy"
-                  decoding="async"
-                  onerror="this.closest('.github-graph').remove()"
-                />
-              </a>
-            </div>
-          </div>
-          <div class="about-photo reveal" aria-hidden="true">
-            <img src="./assets/profile-pic2.png" alt="" />
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" class="section container">
-        <div class="section-head reveal">
-          <span class="section-num">02.</span>
-          <h2 class="h-section">Experience</h2>
-          <span class="section-divider" aria-hidden="true"></span>
-        </div>
-        <div class="timeline">
-          <article class="tl-item is-current reveal">
-            <div class="tl-head">
-              <h3 class="tl-role">Full-stack Developer <span class="muted">·</span> <span class="tl-org">IQsoft</span></h3>
-              <span class="tl-dates">2023 — present</span>
-            </div>
-            <p class="tl-meta">Ioannina, Greece · Full-time</p>
-            <ul>
-              <li>Sole developer of <strong>IQManager</strong>, the ERP and ticketing platform the company runs on — ~70k LOC, 15+ Django apps, one PostgreSQL database, from schema to deploy pipeline.</li>
-              <li>Built <strong>Tank 3 Dashboard</strong>, real-time monitoring for an LNG storage tank: 190+ sensors, a Three.js thermal heatmap and a FastAPI bridge over a legacy Firebird database.</li>
-              <li>Built <strong>Lumap</strong>, a PostGIS platform mapping a municipality's entire street-lighting network, for a public tender.</li>
-              <li>Beyond the code: hardware selection and servicing, on-site installations and customer technical support — which is also where most of the product decisions come from.</li>
-            </ul>
-            <ul class="tl-stack">
-              <li class="tag">Django</li>
-              <li class="tag">DRF</li>
-              <li class="tag">Next.js</li>
-              <li class="tag">React</li>
-              <li class="tag">PostgreSQL</li>
-              <li class="tag">PostGIS</li>
-              <li class="tag">Three.js</li>
-              <li class="tag">FastAPI</li>
-              <li class="tag">Docker</li>
-            </ul>
-          </article>
-
-          <article class="tl-item reveal">
-            <div class="tl-head">
-              <h3 class="tl-role">Freelance Developer <span class="muted">·</span> <span class="tl-org">Independent</span></h3>
-              <span class="tl-dates">2026</span>
-            </div>
-            <p class="tl-meta">Client work, alongside full-time</p>
-            <ul>
-              <li>Launched <strong lang="el">ΠείτεCheese</strong>, a live multi-tenant SaaS for event photo collection — Stripe billing, S3 presigned storage, no-account guest flow.</li>
-              <li>Delivered the <strong>3DPrinto</strong> WooCommerce storefront with a custom WordPress plugin for STL upload and instant quoting, plus myDATA, multi-courier shipping and Viva Wallet integrations.</li>
-              <li>Shipped a bilingual digital menu for <strong>Taverna Karavasilis</strong> that costs the owner nothing to run — JSON content, Cloudflare Pages free tier.</li>
-            </ul>
-            <ul class="tl-stack">
-              <li class="tag">React</li>
-              <li class="tag">TypeScript</li>
-              <li class="tag">Stripe</li>
-              <li class="tag">AWS S3</li>
-              <li class="tag">WooCommerce</li>
-              <li class="tag">PHP</li>
-            </ul>
-          </article>
-
-          <article class="tl-item reveal">
-            <div class="tl-head">
-              <h3 class="tl-role">BSc Computer Science &amp; Engineering <span class="muted">·</span> <span class="tl-org">University of Ioannina</span></h3>
-              <span class="tl-dates">2021 — present</span>
-            </div>
-            <p class="tl-meta">Ioannina, Greece</p>
-            <ul>
-              <li>Coursework across compilers, computer graphics (OpenGL / WebGL), databases and concurrent systems — the graphics and database halves both ended up being daily work.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills" class="section container">
-        <div class="section-head reveal">
-          <span class="section-num">03.</span>
-          <h2 class="h-section">Skills</h2>
-          <span class="section-divider" aria-hidden="true"></span>
-        </div>
-        <div class="skills-grid">
-          <article class="skill-group reveal">
-            <h3>Frontend</h3>
-            <ul class="skill-tags">
-              <li class="tag">React</li>
-              <li class="tag">Next.js</li>
-              <li class="tag">TypeScript</li>
-              <li class="tag">Vite</li>
-              <li class="tag">Mantine</li>
-              <li class="tag">Tailwind</li>
-              <li class="tag">HTML</li>
-              <li class="tag">CSS</li>
-            </ul>
-          </article>
-          <article class="skill-group reveal">
-            <h3>Backend</h3>
-            <ul class="skill-tags">
-              <li class="tag">Python</li>
-              <li class="tag">Django</li>
-              <li class="tag">DRF</li>
-              <li class="tag">FastAPI</li>
-              <li class="tag">Flask</li>
-              <li class="tag">Node.js</li>
-              <li class="tag">Express</li>
-              <li class="tag">PHP</li>
-            </ul>
-          </article>
-          <article class="skill-group reveal">
-            <h3>Data &amp; Infra</h3>
-            <ul class="skill-tags">
-              <li class="tag">PostgreSQL</li>
-              <li class="tag">MariaDB</li>
-              <li class="tag">Firebird</li>
-              <li class="tag">Redis</li>
-              <li class="tag">Docker</li>
-              <li class="tag">Linux</li>
-              <li class="tag">Caddy</li>
-              <li class="tag">Git</li>
-            </ul>
-          </article>
-          <article class="skill-group reveal">
-            <h3>3D &amp; Graphics</h3>
-            <ul class="skill-tags">
-              <li class="tag">Three.js</li>
-              <li class="tag">React Three Fiber</li>
-              <li class="tag">WebGL</li>
-              <li class="tag">OpenGL</li>
-              <li class="tag">Unity</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="work" class="section container">
-        <div class="section-head reveal">
-          <span class="section-num">04.</span>
-          <h2 class="h-section">Selected work</h2>
-          <span class="section-divider" aria-hidden="true"></span>
-        </div>
-        <div class="work-grid">
-          <a href="./projects/lumap/" class="work-card reveal">
-            <div class="work-img-wrap">
-              <img src="./assets/projects/lumap/cover.jpg" alt="Lumap map screen with lighting assets over Kalambaka" />
-            </div>
-            <div class="work-body">
-              <div class="work-meta">
-                <span>Featured</span>
-                <span>2026</span>
-                <span>In development</span>
-              </div>
-              <h3 class="work-title">Lumap</h3>
-              <p class="work-tagline">
-                GIS platform for municipal street lighting — every lamp post and
-                distribution pillar of a municipality on one map, in one PostGIS
-                database, with issues, statistics and graded roles.
-              </p>
-              <ul class="work-stack">
-                <li class="tag">Django 5</li>
-                <li class="tag">GeoDjango</li>
-                <li class="tag">PostGIS</li>
-                <li class="tag">MapLibre GL</li>
-                <li class="tag">Docker</li>
-              </ul>
-              <span class="work-cta">
-                Read case study
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <a href="./projects/peitecheese/" class="work-card reveal">
-            <div class="work-img-wrap">
-              <img src="./assets/projects/peitecheese/cover.jpg" alt="ΠείτεCheese landing page with a phone showing a live event gallery" />
-            </div>
-            <div class="work-body">
-              <div class="work-meta">
-                <span>Featured</span>
-                <span>2026</span>
-                <span>Live</span>
-              </div>
-              <h3 class="work-title" lang="el">ΠείτεCheese</h3>
-              <p class="work-tagline">
-                Multi-tenant SaaS that collects every guest's photos and videos
-                behind one QR code — no app, no account — with a live wall,
-                Stripe one-off billing and a full-quality ZIP export.
-              </p>
-              <ul class="work-stack">
-                <li class="tag">React 19</li>
-                <li class="tag">TypeScript</li>
-                <li class="tag">Django REST</li>
-                <li class="tag">AWS S3</li>
-                <li class="tag">Stripe</li>
-              </ul>
-              <span class="work-cta">
-                Read case study
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <a href="./projects/iqmanager/" class="work-card reveal">
-            <div class="work-img-wrap">
-              <img src="./assets/projects/iqmanager.png" alt="IQManager dashboard" />
-            </div>
-            <div class="work-body">
-              <div class="work-meta">
-                <span>Work project</span>
-                <span>2024 — present</span>
-                <span>Production</span>
-              </div>
-              <h3 class="work-title">IQManager</h3>
-              <p class="work-tagline">
-                A full-stack ERP and ticketing platform that runs an entire
-                field-services business — customers, contracts, tickets, warehouse,
-                timesheets, invoicing.
-              </p>
-              <ul class="work-stack">
-                <li class="tag">Next.js</li>
-                <li class="tag">Mantine</li>
-                <li class="tag">Django REST</li>
-                <li class="tag">PostgreSQL</li>
-                <li class="tag">Docker</li>
-              </ul>
-              <span class="work-cta">
-                Read case study
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <a href="./projects/tank-3-dashboard/" class="work-card reveal">
-            <div class="work-img-wrap">
-              <img src="./assets/projects/tank-3d.png" alt="Tank 3 Dashboard with thermal heatmap" />
-            </div>
-            <div class="work-body">
-              <div class="work-meta">
-                <span>Work project</span>
-                <span>2025 — present</span>
-                <span>Production</span>
-              </div>
-              <h3 class="work-title">Tank 3 Dashboard</h3>
-              <p class="work-tagline">
-                Real-time monitoring for an LNG storage tank — 190+ thermistors,
-                tiltmeters, seismic and inclinometer sensors, with a 3D tank
-                viewer and thermal heatmap.
-              </p>
-              <ul class="work-stack">
-                <li class="tag">React</li>
-                <li class="tag">Three.js</li>
-                <li class="tag">FastAPI</li>
-                <li class="tag">Firebird</li>
-                <li class="tag">Docker</li>
-              </ul>
-              <span class="work-cta">
-                Read case study
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <a href="./projects/3d-price-lab/" class="work-card reveal">
-            <div class="work-img-wrap">
-              <img src="./assets/projects/3dpricelab-home.png" alt="3D Price Lab landing page" />
-            </div>
-            <div class="work-body">
-              <div class="work-meta">
-                <span>Side project</span>
-                <span>2026</span>
-                <span>Open source</span>
-              </div>
-              <h3 class="work-title">3D Price Lab</h3>
-              <p class="work-tagline">
-                Drop-in STL/OBJ/3MF cost calculator that breaks a print into
-                material, electricity, labour, machine wear, margin and VAT —
-                in any currency, fully in the browser.
-              </p>
-              <ul class="work-stack">
-                <li class="tag">React 19</li>
-                <li class="tag">TypeScript</li>
-                <li class="tag">Three.js</li>
-                <li class="tag">Vite</li>
-                <li class="tag">Zustand</li>
-              </ul>
-              <span class="work-cta">
-                Read case study
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <a href="./projects/taverna-karavasilis/" class="work-card reveal">
-            <div class="work-img-wrap">
-              <img src="./assets/projects/taverna/cover.png" alt="Taverna Karavasilis menu shown in three phones" />
-            </div>
-            <div class="work-body">
-              <div class="work-meta">
-                <span>Client project</span>
-                <span>2026</span>
-                <span>Live</span>
-              </div>
-              <h3 class="work-title">Taverna Karavasilis Menu</h3>
-              <p class="work-tagline">
-                Mobile-first digital menu for a traditional Greek tavern,
-                deployed on Cloudflare Pages — bilingual (GR / EN), light /
-                dark theme, animated category navigation.
-              </p>
-              <ul class="work-stack">
-                <li class="tag">React</li>
-                <li class="tag">TypeScript</li>
-                <li class="tag">Vite</li>
-                <li class="tag">CSS Animations</li>
-                <li class="tag">Cloudflare Pages</li>
-              </ul>
-              <span class="work-cta">
-                Read case study
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-
-          <a href="./projects/3dprinto-eshop/" class="work-card reveal">
-            <div class="work-img-wrap">
-              <img src="./assets/projects/3dprinto-home.png" alt="3DPrinto eShop hero" />
-            </div>
-            <div class="work-body">
-              <div class="work-meta">
-                <span>Client project</span>
-                <span>2026</span>
-                <span>Production</span>
-              </div>
-              <h3 class="work-title">3DPrinto eShop</h3>
-              <p class="work-tagline">
-                WooCommerce store for a 3D printing studio with a custom WordPress
-                plugin for STL upload &amp; instant quoting, plus full Greek-market
-                integrations (myDATA, ACS, Box Now, Viva Wallet).
-              </p>
-              <ul class="work-stack">
-                <li class="tag">WordPress</li>
-                <li class="tag">WooCommerce</li>
-                <li class="tag">Custom Plugin</li>
-                <li class="tag">MariaDB</li>
-                <li class="tag">Docker</li>
-              </ul>
-              <span class="work-cta">
-                Read case study
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <section id="contact" class="section container contact">
+      <!-- ── Hero ─────────────────────────────────────────────── -->
+      <section class="hero">
         <div class="reveal">
-          <p class="eyebrow">05. Contact</p>
-          <h2 class="contact-prompt">Got an idea? Let's build it.</h2>
-          <p class="lead" style="margin-inline:auto;">
-            I'm open to roles, freelance work and interesting collaborations.
-            Drop me a line — I read everything.
+          <!-- Deliberately timeless. A hard-coded month ("· Sep 2026") goes
+               stale on its own and then quietly lies; flip this line off
+               instead when you stop taking work. -->
+          <div class="hero-badge">
+            <span class="dot" aria-hidden="true"></span>
+            <span data-i18n="available">Δέχομαι νέα έργα</span>
+          </div>
+          <h1 class="hero-title">
+            <span data-i18n="heroTitle1">Λογισμικό που δουλεύει κάθε μέρα</span>
+            <span class="accent" data-i18n="heroTitle2">σε πραγματικές επιχειρήσεις.</span>
+          </h1>
+          <p class="hero-body" data-i18n="heroBody">
+            Σχεδιάζω και υλοποιώ web εφαρμογές, ERP, e-shops και βιομηχανικά dashboards από την αρχή μέχρι την παράδοση. Επτά από τα παρακάτω τρέχουν σε παραγωγή με πραγματικούς χρήστες· ένα είναι υπό ανάπτυξη και ένα είναι προσωπικό εργαλείο.
           </p>
-          <a href="mailto:aristotelisgouvas@gmail.com" class="contact-email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1.1em;height:1.1em;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
-            aristotelisgouvas@gmail.com
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary" data-i18n="heroCta1">Συζητήστε το έργο σας</a>
+            <a href="#work" class="btn btn-ghost" data-i18n="heroCta2">Δείτε τα έργα</a>
+          </div>
+          <dl class="hero-stats">
+            <div>
+              <dt class="hero-stat-num">3+</dt>
+              <dd class="hero-stat-label" data-i18n="stat1">χρόνια σε συστήματα παραγωγής</dd>
+            </div>
+            <div>
+              <dt class="hero-stat-num">9</dt>
+              <dd class="hero-stat-label" data-i18n="stat2">έργα σε πραγματικούς χρήστες</dd>
+            </div>
+            <div>
+              <dt class="hero-stat-num">24h</dt>
+              <dd class="hero-stat-label" data-i18n="stat3">χρόνος απάντησης σε κάθε μήνυμα</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-mock-wrap reveal">
+          <div class="hero-mock">
+            <div class="hero-mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>iqmanager · dashboard</span></div>
+            <img src="./assets/projects/iqmanager/01-dashboard.webp" width="1440" height="900" alt="IQManager dashboard" decoding="async" fetchpriority="high" />
+          </div>
+          <div class="hero-float">
+            <small data-i18n="heroBadgeLabel">Σε παραγωγή από το 2024</small>
+            <strong data-i18n="heroBadgeValue">ERP · 70.000 γραμμές κώδικα</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Live right now ───────────────────────────────────── -->
+      <section class="live reveal" aria-labelledby="live-label">
+        <div class="live-head">
+          <span id="live-label" class="eyebrow" data-i18n="liveLabel">Ζωντανά τώρα</span>
+          <span data-i18n="liveSub">Ανοίξτε τα — δεν χρειάζεται να με πιστέψετε στα λόγια.</span>
+        </div>
+        <div class="cell-grid live-grid">
+          <a class="live-item" href="https://peitecheese.gr/" target="_blank" rel="noopener">
+            <span><b>peitecheese.gr</b><small data-i18n="live1">SaaS συλλογής φωτογραφιών εκδηλώσεων</small></span>
+            <span class="live-pill"><i aria-hidden="true"></i>LIVE ↗</span>
           </a>
-          <div class="socials" aria-label="Find me elsewhere">
-            <a href="https://www.linkedin.com/in/aristotelis-gkouvas/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-3.37-4-3.11-4 0v5.6h-3v-11h3v1.77c1.4-2.59 7-2.78 7 2.48v6.75z"/></svg>
+          <a class="live-item" href="https://myloukoumi.com/" target="_blank" rel="noopener">
+            <span><b>myloukoumi.com</b><small data-i18n="live2">Πλατφόρμα χορηγιών για πολιτιστικούς φορείς</small></span>
+            <span class="live-pill"><i aria-hidden="true"></i>LIVE ↗</span>
+          </a>
+          <a class="live-item" href="https://dkapartments.gr/" target="_blank" rel="noopener">
+            <span><b>dkapartments.gr</b><small data-i18n="live3">Ιστοσελίδα ενοικιαζόμενων διαμερισμάτων</small></span>
+            <span class="live-pill"><i aria-hidden="true"></i>LIVE ↗</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ── 01 Services ──────────────────────────────────────── -->
+      <section id="services" class="section">
+        <div class="section-head reveal">
+          <span class="section-num">01</span>
+          <h2 class="h-section" data-i18n="servicesTitle">Τι μπορώ να αναλάβω</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <p class="section-sub reveal" data-i18n="servicesSub">Ένας συνεργάτης για όλο το τεχνικό μέρος — από τη βάση δεδομένων μέχρι την οθόνη που βλέπει ο πελάτης σας.</p>
+        <div class="cell-grid services-grid reveal">
+          <article class="svc">
+            <div class="num">01</div>
+            <h3 data-i18n="svc1t">Custom web εφαρμογές &amp; SaaS</h3>
+            <p data-i18n="svc1d">Πλατφόρμες με χρήστες, συνδρομές, πληρωμές (Stripe / Viva Wallet) και αποθήκευση αρχείων — έτοιμες να κλιμακωθούν.</p>
+          </article>
+          <article class="svc">
+            <div class="num">02</div>
+            <h3 data-i18n="svc2t">ERP &amp; εσωτερικά εργαλεία</h3>
+            <p data-i18n="svc2d">Συστήματα διαχείρισης πελατών, συμβολαίων, αποθήκης, τιμολόγησης και τεχνικών — προσαρμοσμένα στον τρόπο που ήδη δουλεύετε.</p>
+          </article>
+          <article class="svc">
+            <div class="num">03</div>
+            <h3 data-i18n="svc3t">E-shop (WooCommerce)</h3>
+            <p data-i18n="svc3d">Ηλεκτρονικά καταστήματα με ελληνικές ενσωματώσεις: myDATA, ACS, Box Now, Viva Wallet, και custom plugins όπου χρειάζεται.</p>
+          </article>
+          <article class="svc">
+            <div class="num">04</div>
+            <h3 data-i18n="svc4t">Dashboards &amp; βιομηχανικό IoT</h3>
+            <p data-i18n="svc4d">Παρακολούθηση αισθητήρων σε πραγματικό χρόνο, alarms, γραφήματα και σύνδεση με υπάρχοντα (ακόμα και παλιά) συστήματα.</p>
+          </article>
+          <article class="svc">
+            <div class="num">05</div>
+            <h3 data-i18n="svc5t">3D &amp; WebGL</h3>
+            <p data-i18n="svc5d">Τρισδιάστατες απεικονίσεις στον browser — από heatmaps δεξαμενών μέχρι εργαλεία κοστολόγησης 3D εκτύπωσης.</p>
+          </article>
+          <article class="svc">
+            <div class="num">06</div>
+            <h3 data-i18n="svc6t">Digital menus &amp; μικρά sites</h3>
+            <p data-i18n="svc6d">Γρήγορες, δίγλωσσες ιστοσελίδες για εστίαση και τουρισμό, με μηδενικό μηνιαίο κόστος λειτουργίας.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ── 02 Case study ────────────────────────────────────── -->
+      <section id="case" class="section">
+        <div class="section-head has-grid reveal">
+          <span class="section-num">02</span>
+          <h2 class="h-section" data-i18n="caseTitle">Αναλυτικό case study</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <article class="case reveal">
+          <div class="case-top">
+            <div>
+              <div class="case-meta">
+                <span class="org">IQsoft</span><span>·</span><span>2024 — <span data-i18n="present">σήμερα</span></span><span>·</span><span class="ok" data-i18n="production">Παραγωγή</span>
+              </div>
+              <h3>IQManager</h3>
+              <p class="case-lead" data-i18n="caseLead">Το ERP που λειτουργεί ολόκληρη την εταιρεία IQsoft — πελάτες, συμβόλαια, tickets, αποθήκη, ωρομέτρηση, τιμολόγηση. Μοναδικός developer από το σχήμα της βάσης μέχρι το deploy.</p>
+            </div>
+            <div class="cell-grid case-metrics">
+              <div><b>70k</b><small data-i18n="caseM1">γραμμές κώδικα</small></div>
+              <div><b>15+</b><small data-i18n="caseM2">ενότητες (Django apps)</small></div>
+              <div><b>1</b><small data-i18n="caseM3">βάση δεδομένων για όλα</small></div>
+            </div>
+          </div>
+          <div class="case-cols">
+            <div>
+              <span class="eyebrow" data-i18n="caseProblemL">Το πρόβλημα</span>
+              <p data-i18n="caseProblem">Η εταιρεία δούλευε με διάσπαρτα αρχεία, χειρόγραφα tickets και χωρίς ενιαία εικόνα για συμβόλαια και αποθήκη. Οι τεχνικοί στο πεδίο δεν είχαν πρόσβαση σε τίποτα.</p>
+            </div>
+            <div>
+              <span class="eyebrow" data-i18n="caseSolutionL">Η λύση</span>
+              <p data-i18n="caseSolution">Ένα ενιαίο σύστημα Next.js + Django με ρόλους, ροές εργασίας ανά τμήμα και mobile-friendly οθόνες για τους τεχνικούς. Σταδιακή μετάβαση, χωρίς διακοπή λειτουργίας.</p>
+            </div>
+            <div>
+              <span class="eyebrow" data-i18n="caseResultL">Το αποτέλεσμα</span>
+              <p data-i18n="caseResult">Όλη η εταιρεία τρέχει σε μία πλατφόρμα από το 2024. Κάθε ticket, συμβόλαιο και τιμολόγιο περνά από το σύστημα — και οι αποφάσεις προϊόντος βγαίνουν από την καθημερινή επαφή με τους χρήστες.</p>
+            </div>
+          </div>
+          <div class="case-shots">
+            <img src="./assets/projects/iqmanager/01-dashboard.webp" width="1440" height="900" alt="IQManager dashboard" loading="lazy" decoding="async" />
+            <img src="./assets/projects/iqmanager/03-tickets.webp" width="1440" height="900" alt="IQManager tickets" loading="lazy" decoding="async" />
+            <img src="./assets/projects/iqmanager/07-invoicing.webp" width="1440" height="900" alt="IQManager invoicing" loading="lazy" decoding="async" />
+          </div>
+          <div class="case-foot">
+            <ul>
+              <li class="tag">Next.js</li>
+              <li class="tag">Mantine</li>
+              <li class="tag">Django REST</li>
+              <li class="tag">PostgreSQL</li>
+              <li class="tag">Docker</li>
+            </ul>
+            <a class="btn-link" href="./projects/iqmanager/"><span data-i18n="readCase">Πλήρες case study</span> →</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- ── 03 Selected work ─────────────────────────────────── -->
+      <section id="work" class="section">
+        <div class="section-head has-grid reveal">
+          <span class="section-num">03</span>
+          <h2 class="h-section" data-i18n="workTitle">Επιλεγμένα έργα</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="wgrid">
+          <a href="./projects/loukoumi/" class="wcard reveal">
+            <img src="./assets/projects/loukoumi/cover.webp" width="1440" height="900" alt="Loukoumi landing page" loading="lazy" decoding="async" />
+            <div class="wcard-body">
+              <div class="wcard-meta"><span data-i18n="platform">Πλατφόρμα</span> · <span class="ok">Live</span></div>
+              <h3>Loukoumi</h3>
+              <p data-i18n="pLoukoumi">Πλατφόρμα που ταιριάζει πολιτιστικούς συλλόγους με εταιρείες-χορηγούς — δίγλωσση, με επαλήθευση κάθε καταχώρησης.</p>
+            </div>
+          </a>
+          <a href="./projects/dkapartments/" class="wcard reveal">
+            <img src="./assets/projects/dkapartments/cover.webp" width="1440" height="900" alt="DK Apartments landing page" loading="lazy" decoding="async" />
+            <div class="wcard-body">
+              <div class="wcard-meta"><span data-i18n="hospitality">Τουρισμός</span> · <span class="ok">Live</span></div>
+              <h3>DK Apartments</h3>
+              <p data-i18n="pDk">Δίγλωσσο site για τρία ενοικιαζόμενα διαμερίσματα στα Ιωάννινα — ένα αρχείο, μηδέν εξαρτήσεις, hand-off στη Booking.com.</p>
+            </div>
+          </a>
+          <a href="./projects/lumap/" class="wcard reveal">
+            <img src="./assets/projects/lumap/03-map.webp" width="1600" height="950" alt="Lumap map" loading="lazy" decoding="async" />
+            <div class="wcard-body">
+              <div class="wcard-meta">GIS · <span data-i18n="publicSector">Δημόσιος τομέας</span></div>
+              <h3>Lumap</h3>
+              <p data-i18n="pLumap">Πλατφόρμα GIS για τον δημοτικό φωτισμό — κάθε στύλος και πίλαρ ενός δήμου σε έναν χάρτη, με βλάβες και στατιστικά.</p>
+            </div>
+          </a>
+          <a href="./projects/peitecheese/" class="wcard reveal">
+            <img src="./assets/projects/peitecheese/05-livewall.webp" width="1600" height="1000" alt="ΠείτεCheese live wall" loading="lazy" decoding="async" />
+            <div class="wcard-body">
+              <div class="wcard-meta">SaaS · <span class="ok">Live</span></div>
+              <h3 lang="el">ΠείτεCheese</h3>
+              <p data-i18n="pCheese">Οι καλεσμένοι ανεβάζουν φωτογραφίες με ένα QR, χωρίς εφαρμογή — live wall, πληρωμές Stripe, εξαγωγή ZIP.</p>
+            </div>
+          </a>
+          <a href="./projects/tank-3-dashboard/" class="wcard reveal">
+            <img src="./assets/projects/tank/02-3d-heatmap.webp" width="1440" height="900" alt="Tank 3 Dashboard thermal heatmap" loading="lazy" decoding="async" />
+            <div class="wcard-body">
+              <div class="wcard-meta"><span data-i18n="industrial">Βιομηχανικό</span> · <span class="ok" data-i18n="production">Παραγωγή</span></div>
+              <h3>Tank 3 Dashboard</h3>
+              <p data-i18n="pTank">Παρακολούθηση δεξαμενής LNG σε πραγματικό χρόνο — 189 αισθητήρες, 3D θερμικός χάρτης, alarms.</p>
+            </div>
+          </a>
+          <a href="./projects/3d-price-lab/" class="wcard reveal">
+            <img src="./assets/projects/3dpricelab/06-calculator-loaded.webp" width="1440" height="900" alt="3D Price Lab calculator" loading="lazy" decoding="async" />
+            <div class="wcard-body">
+              <div class="wcard-meta">3D / WebGL · <span class="gold" data-i18n="sideProject">Προσωπικό έργο</span></div>
+              <h3>3D Price Lab</h3>
+              <p data-i18n="pPriceLab">Υπολογιστής κόστους 3D εκτύπωσης στον browser — υλικό, ρεύμα, εργασία, φθορά, ΦΠΑ.</p>
+            </div>
+          </a>
+          <a href="./projects/3dprinto-eshop/" class="wcard reveal">
+            <img src="./assets/projects/3dprinto/01-home.webp" width="1440" height="900" alt="3DPrinto eShop" loading="lazy" decoding="async" />
+            <div class="wcard-body">
+              <div class="wcard-meta">E-shop · <span class="ok" data-i18n="production">Παραγωγή</span></div>
+              <h3>3DPrinto eShop</h3>
+              <p data-i18n="pPrinto">Κατάστημα 3D εκτύπωσης με ανέβασμα STL και άμεση κοστολόγηση, myDATA, courier και Viva Wallet.</p>
+            </div>
+          </a>
+          <a href="./projects/taverna-karavasilis/" class="wcard reveal">
+            <img src="./assets/projects/taverna/cover.webp" width="1440" height="900" alt="Taverna Karavasilis menu" loading="lazy" decoding="async" />
+            <div class="wcard-body">
+              <div class="wcard-meta"><span data-i18n="smallSite">Εστίαση</span> · <span class="ok">Live</span></div>
+              <h3>Taverna Karavasilis</h3>
+              <p data-i18n="pTaverna">Δίγλωσσος ψηφιακός κατάλογος για ταβέρνα, light/dark, με μηδενικό κόστος λειτουργίας.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ── 04 Process ───────────────────────────────────────── -->
+      <section id="process" class="section">
+        <div class="section-head reveal">
+          <span class="section-num">04</span>
+          <h2 class="h-section" data-i18n="processTitle">Πώς δουλεύουμε μαζί</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <p class="section-sub reveal" data-i18n="processSub">Καθαρά στάδια, καθαρή επικοινωνία. Ξέρετε πάντα σε ποιο σημείο βρίσκεται το έργο σας.</p>
+        <div class="process-grid reveal">
+          <div class="step">
+            <div class="num">01</div>
+            <h3 data-i18n="step1t">Συζήτηση &amp; ανάλυση</h3>
+            <p data-i18n="step1d">Μια δωρεάν κλήση 30΄ για να καταλάβω τι χρειάζεστε πραγματικά. Ακολουθεί γραπτή πρόταση με εύρος, χρόνο και κόστος.</p>
+          </div>
+          <div class="step">
+            <div class="num">02</div>
+            <h3 data-i18n="step2t">Σχεδιασμός</h3>
+            <p data-i18n="step2d">Πρωτότυπα οθονών και δομή δεδομένων πριν γραφτεί κώδικας — για να εγκρίνετε αυτό που θα φτιαχτεί.</p>
+          </div>
+          <div class="step">
+            <div class="num">03</div>
+            <h3 data-i18n="step3t">Υλοποίηση σε στάδια</h3>
+            <p data-i18n="step3d">Παραδόσεις κάθε 1–2 εβδομάδες σε δικό σας test περιβάλλον. Βλέπετε πρόοδο, όχι υποσχέσεις.</p>
+          </div>
+          <div class="step">
+            <div class="num">04</div>
+            <h3 data-i18n="step4t">Παράδοση &amp; συντήρηση</h3>
+            <p data-i18n="step4d">Εγκατάσταση, εκπαίδευση, τεκμηρίωση. Ο κώδικας είναι δικός σας. Προαιρετική συντήρηση μετά.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── About ────────────────────────────────────────────── -->
+      <section id="about" class="section">
+        <div class="about-card reveal">
+          <div class="about-me">
+            <img class="about-avatar" src="./assets/profile-pic2.webp" width="400" height="400" alt="Aristotelis Gkouvas" loading="lazy" decoding="async" />
+            <div>
+              <span class="eyebrow" data-i18n="aboutLabel">Ποιος είμαι</span>
+              <p data-i18n="aboutBody">Αριστοτέλης Γκούβας — full-stack developer στην IQsoft και φοιτητής Πληροφορικής στο Πανεπιστήμιο Ιωαννίνων. Πέρα από τον κώδικα, κάνω εγκαταστάσεις και τεχνική υποστήριξη στο πεδίο — γι’ αυτό φτιάχνω λογισμικό που καταλαβαίνουν άνθρωποι χωρίς τεχνικές γνώσεις.</p>
+              <div class="about-facts">
+                <span data-i18n="aboutLoc">Ιωάννινα · remote σε όλη την Ελλάδα</span>
+                <span data-i18n="aboutEdu">BSc Πληροφορικής, Παν. Ιωαννίνων</span>
+                <span>GR / EN</span>
+                <a href="./cv/" data-i18n="aboutCv">Βιογραφικό →</a>
+              </div>
+            </div>
+          </div>
+          <!-- Third-party image. If the service is down, drop the whole block
+               rather than leave a broken graph on the page. -->
+          <div class="gh-wrap">
+            <div class="gh-head">
+              <span data-i18n="githubLabel">Δραστηριότητα GitHub (τελευταίος χρόνος)</span>
+              <a href="https://github.com/AristotelisGkouvas" target="_blank" rel="noopener">github.com/AristotelisGkouvas ↗</a>
+            </div>
+            <a class="gh-box" href="https://github.com/AristotelisGkouvas" target="_blank" rel="noopener" aria-label="Open my GitHub profile">
+              <img
+                src="https://ghchart.rshah.org/7FA3C4/AristotelisGkouvas"
+                width="663"
+                height="104"
+                alt="GitHub contributions for AristotelisGkouvas"
+                loading="lazy"
+                decoding="async"
+                onerror="this.closest('.gh-wrap').remove()"
+              />
             </a>
-            <a href="https://github.com/AristotelisGkouvas" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            </a>
-            <a href="mailto:aristotelisgouvas@gmail.com" aria-label="Email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
-            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 05 FAQ ───────────────────────────────────────────── -->
+      <section id="faq" class="section">
+        <div class="section-head has-grid reveal">
+          <span class="section-num">05</span>
+          <h2 class="h-section" data-i18n="faqTitle">Συχνές ερωτήσεις</h2>
+          <span class="section-divider" aria-hidden="true"></span>
+        </div>
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary><span data-i18n="faq1q">Πόσο χρόνο παίρνει ένα έργο;</span><svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p data-i18n="faq1a">Ένα site ή digital menu: 1–2 εβδομάδες. Ένα e-shop με ελληνικές ενσωματώσεις: 3–6 εβδομάδες. Μια custom εφαρμογή ή ERP: 2–4 μήνες για την πρώτη λειτουργική έκδοση, με παραδόσεις κάθε 1–2 εβδομάδες. Θα λάβετε γραπτό χρονοδιάγραμμα πριν ξεκινήσουμε.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2q">Τι γίνεται μετά την παράδοση;</span><svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p data-i18n="faq2a">Οι πρώτες 30 ημέρες διορθώσεις καλύπτονται. Μετά, μπορείτε να επιλέξετε μηνιαία συντήρηση (ενημερώσεις, backups, μικρές αλλαγές) ή να με καλείτε μόνο όταν χρειάζεται. Τα έργα σε παραγωγή που βλέπετε παραπάνω συντηρούνται ακριβώς έτσι.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3q">Ποιος κρατά τον κώδικα;</span><svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p data-i18n="faq3a">Εσείς. Με την εξόφληση, ο κώδικας και τα δεδομένα παραδίδονται σε δικά σας accounts (GitHub, server, domain). Δεν υπάρχει δέσμευση σε εμένα — μπορεί να τον συνεχίσει οποιοσδήποτε developer.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4q">Hosting και domain — τι χρειάζεται;</span><svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p data-i18n="faq4a">Σας καθοδηγώ στην αγορά domain και hosting στο όνομά σας και αναλαμβάνω όλη την τεχνική εγκατάσταση (server, SSL, backups). Για μικρά sites συχνά το κόστος λειτουργίας είναι μηδενικό.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- ── Contact ──────────────────────────────────────────── -->
+      <section id="contact" class="section contact">
+        <div class="contact-card reveal">
+          <span class="eyebrow" data-i18n="contactLabel">Επικοινωνία</span>
+          <h2 class="contact-title" data-i18n="contactTitle">Έχετε μια ιδέα ή ένα πρόβλημα που θέλει λύση;</h2>
+          <p class="contact-body" data-i18n="contactBody">Στείλτε μου δύο γραμμές για το τι χρειάζεστε. Απαντώ εντός 24 ωρών με τα επόμενα βήματα — χωρίς καμία δέσμευση.</p>
+          <div class="contact-actions">
+            <a href="mailto:aristotelisgouvas@gmail.com" class="btn btn-primary" data-i18n="contactEmail">Στείλτε email</a>
+            <!-- Shown only when PHONE is set at the top of script.js. -->
+            <a id="wa-link" href="#contact" class="btn btn-ghost" target="_blank" rel="noopener" hidden>WhatsApp</a>
+            <!-- mailto: is a dead end on a machine with no mail client set up,
+                 which is most locked-down corporate desktops. -->
+            <button class="copy-email btn btn-ghost" type="button" data-email="aristotelisgouvas@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span class="copy-label" role="status" aria-live="polite" data-i18n="contactCopy">Αντιγραφή email</span>
+            </button>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:aristotelisgouvas@gmail.com">aristotelisgouvas@gmail.com</a>
+            <a href="https://www.linkedin.com/in/aristotelis-gkouvas/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a href="https://github.com/AristotelisGkouvas" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="./cv/" data-i18n="contactCv">Βιογραφικό</a>
           </div>
         </div>
       </section>
@@ -588,8 +484,8 @@
 
     <footer class="site-footer">
       <div class="container footer-row">
-        <span>Designed &amp; built by Aristotelis Gkouvas</span>
-        <span>© <span id="year">2026</span></span>
+        <span data-i18n="footer">Σχεδίαση &amp; υλοποίηση: Αριστοτέλης Γκούβας</span>
+        <span>© <span id="year">2026</span> Aristotelis Gkouvas</span>
       </div>
     </footer>
 

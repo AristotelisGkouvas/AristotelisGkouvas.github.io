@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#11141a" />
+    <meta name="theme-color" content="#0C1117" />
     <meta
       name="description"
       content="Lumap — GIS asset-management platform for municipal street lighting: pillars, lamp posts, issues and statistics on a single PostGIS database."
     />
     <title>Lumap — Aristotelis Gkouvas</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131B23' stroke='%232C3E4D'/%3E%3Ctext x='16' y='21' font-family='Fira Code,monospace' font-size='13' font-weight='600' text-anchor='middle' fill='%239DBEDB'%3EAG%3C/text%3E%3C/svg%3E" />
 
     <link rel="canonical" href="https://aristotelisgkouvas.github.io/projects/lumap/" />
     <meta property="og:type" content="article" />
@@ -22,6 +22,12 @@
     <meta name="twitter:description" content="Municipal street-lighting asset management on PostGIS — map, table, issues, statistics and platform analytics." />
     <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/projects/lumap/cover.jpg" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&amp;family=Figtree:wght@400;500;600&amp;family=Fira+Code:wght@400;500&amp;display=swap"
+    />
     <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
@@ -33,17 +39,17 @@
           <span class="brand-mark">AG</span>
           <span>Aristotelis Gkouvas</span>
         </a>
-        <nav>
-          <ul class="nav-links" aria-label="Primary">
-            <li><a href="../../#about">About</a></li>
-            <li><a href="../../#experience">Experience</a></li>
-            <li><a href="../../#skills">Skills</a></li>
+        <nav aria-label="Primary">
+          <ul id="primary-nav" class="nav-links">
+            <li><a href="../../#services">Services</a></li>
             <li><a href="../../#work">Work</a></li>
-            <li><a href="../../#contact">Contact</a></li>
+            <li><a href="../../#process">Process</a></li>
+            <li><a href="../../#faq">FAQ</a></li>
+            <li><a href="../../cv/">CV</a></li>
           </ul>
         </nav>
         <div class="nav-cta">
-          <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
               <line class="top" x1="4" y1="6" x2="20" y2="6"/>
               <line class="mid" x1="4" y1="12" x2="20" y2="12"/>
@@ -61,7 +67,7 @@
           Back to all work
         </a>
         <div class="project-meta-row reveal">
-          <span>Project <strong>01</strong></span>
+          <span>Project <strong>03</strong></span>
           <span>Year <strong>2026</strong></span>
           <span>Role <strong>Solo developer</strong></span>
           <span>Status <strong style="color:var(--accent)">In development</strong></span>
@@ -73,11 +79,16 @@
           in one PostGIS database, reachable from a laptop in the office or a
           phone in the field.
         </p>
+        <div class="summary-el reveal" lang="el">
+          <p class="fact-label">Με λίγα λόγια</p>
+          <p>Όλο το δίκτυο φωτισμού ενός δήμου σε έναν χάρτη: κάθε φωτιστικό και κάθε πίλαρ, με τα τεχνικά του στοιχεία, το ιστορικό βλαβών και τις ανοιχτές εργασίες.</p>
+          <p>Ο δήμος σταματά να ψάχνει σε excel και shapefiles — βλέπει πού είναι η βλάβη και ποιος την έχει αναλάβει. Χτισμένο πάνω σε προδιαγραφές δημόσιου διαγωνισμού.</p>
+        </div>
       </section>
 
       <section class="container reveal">
         <div class="project-cover">
-          <img src="../../assets/projects/lumap/cover.jpg" alt="Lumap map screen — filters, result list and clustered lighting assets over Kalambaka" />
+          <img src="../../assets/projects/lumap/cover.webp" width="1600" height="950" alt="Lumap map screen — filters, result list and clustered lighting assets over Kalambaka" loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -198,35 +209,50 @@
           <h2 class="h-section">Screens</h2>
           <span class="section-divider" aria-hidden="true"></span>
         </div>
+        <p class="data-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Screenshots come from the demo deployment. Asset codes, addresses, fault reports and the user names shown in them are seeded demo records, not live municipal data.</span>
+        </p>
         <div class="gallery-grid">
-          <a class="gallery-item reveal" href="../../assets/projects/lumap/03-map.jpg" data-caption="Map — filters, live result list and clustered assets coloured by condition">
-            <img src="../../assets/projects/lumap/03-map.jpg" alt="Map with filters, result list and clustered assets" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/lumap/03-map.webp" data-caption="Map — filters, live result list and clustered assets coloured by condition">
+            <img src="../../assets/projects/lumap/03-map.webp" width="1600" height="950" alt="Map with filters, result list and clustered assets" loading="lazy" />
             <span class="gallery-caption">Map — filters, result list, clusters by condition</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/lumap/04-detail.jpg" data-caption="Asset card — photos, technical specs, both coordinate systems, supplier and warranty">
-            <img src="../../assets/projects/lumap/04-detail.jpg" alt="Asset detail drawer over the map" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/lumap/04-detail.webp" data-caption="Asset card — photos, technical specs, both coordinate systems, supplier and warranty">
+            <img src="../../assets/projects/lumap/04-detail.webp" width="1600" height="950" alt="Asset detail drawer over the map" loading="lazy" />
             <span class="gallery-caption">Asset card — specs, coordinates, warranty, photos</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/lumap/05-table.png" data-caption="Equipment table — 1,300+ rows, full-field search, bulk actions, import and export">
-            <img src="../../assets/projects/lumap/05-table.png" alt="Equipment table with search and bulk actions" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/lumap/05-table.webp" data-caption="Equipment table — 1,300+ rows, full-field search, bulk actions, import and export">
+            <img src="../../assets/projects/lumap/05-table.webp" width="1600" height="950" alt="Equipment table with search and bulk actions" loading="lazy" />
             <span class="gallery-caption">Table — full-field search, bulk actions, import / export</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/lumap/06-stats.png" data-caption="Network statistics — LED conversion, energy saving, condition breakdown, open issues">
-            <img src="../../assets/projects/lumap/06-stats.png" alt="Network statistics dashboard" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/lumap/06-stats.webp" data-caption="Network statistics — LED conversion, energy saving, condition breakdown, open issues">
+            <img src="../../assets/projects/lumap/06-stats.webp" width="1600" height="950" alt="Network statistics dashboard" loading="lazy" />
             <span class="gallery-caption">Statistics — LED conversion &amp; energy saving</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/lumap/07-issues.png" data-caption="Issues — faults and maintenance requests per asset, by severity and status">
-            <img src="../../assets/projects/lumap/07-issues.png" alt="Issues list by severity and status" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/lumap/07-issues.webp" data-caption="Issues — faults and maintenance requests per asset, by severity and status">
+            <img src="../../assets/projects/lumap/07-issues.webp" width="1600" height="950" alt="Issues list by severity and status" loading="lazy" />
             <span class="gallery-caption">Issues — faults per asset, by severity</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/lumap/02-login.jpg" data-caption="Sign-in — one-click demo accounts for the three graded roles the tender requires">
-            <img src="../../assets/projects/lumap/02-login.jpg" alt="Sign-in screen with demo role buttons" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/lumap/02-login.webp" data-caption="Sign-in — one-click demo accounts for the three graded roles the tender requires">
+            <img src="../../assets/projects/lumap/02-login.webp" width="1600" height="950" alt="Sign-in screen with demo role buttons" loading="lazy" />
             <span class="gallery-caption">Sign-in — one-click demo roles</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/lumap/01-landing.png" data-caption="Public landing page — what the platform does, for municipalities evaluating it">
-            <img src="../../assets/projects/lumap/01-landing.png" alt="Public landing page for Lumap" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/lumap/01-landing.webp" data-caption="Public landing page — what the platform does, for municipalities evaluating it">
+            <img src="../../assets/projects/lumap/01-landing.webp" width="1600" height="950" alt="Public landing page for Lumap" loading="lazy" />
             <span class="gallery-caption">Public landing page</span>
           </a>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="case-cta reveal">
+          <h2>Θέλετε κάτι αντίστοιχο για την επιχείρησή σας;</h2>
+          <p>Δύο γραμμές για το τι χρειάζεστε — απαντώ εντός 24 ωρών με τα επόμενα βήματα, χωρίς καμία δέσμευση.</p>
+          <div class="hero-actions">
+            <a href="mailto:aristotelisgouvas@gmail.com" class="btn btn-primary">Στείλτε email</a>
+            <a href="../../#work" class="btn btn-ghost">Δείτε όλα τα έργα</a>
+          </div>
         </div>
       </section>
 

@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#11141a" />
+    <meta name="theme-color" content="#0C1117" />
     <meta
       name="description"
       content="ΠείτεCheese — QR-based event photo collection. Guests scan, upload and browse from the browser; the organiser gets everything in one gallery and one ZIP."
     />
     <title>ΠείτεCheese — Aristotelis Gkouvas</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2349d28a'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23131316'%3EAG%3C/text%3E%3C/svg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23131B23' stroke='%232C3E4D'/%3E%3Ctext x='16' y='21' font-family='Fira Code,monospace' font-size='13' font-weight='600' text-anchor='middle' fill='%239DBEDB'%3EAG%3C/text%3E%3C/svg%3E" />
 
     <link rel="canonical" href="https://aristotelisgkouvas.github.io/projects/peitecheese/" />
     <meta property="og:type" content="article" />
@@ -22,6 +22,12 @@
     <meta name="twitter:description" content="Event photo collection over a QR code — no app, no account for guests. Django + React, S3 presigned URLs, Stripe, live wall." />
     <meta name="twitter:image" content="https://aristotelisgkouvas.github.io/assets/projects/peitecheese/cover.jpg" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&amp;family=Figtree:wght@400;500;600&amp;family=Fira+Code:wght@400;500&amp;display=swap"
+    />
     <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
@@ -33,17 +39,17 @@
           <span class="brand-mark">AG</span>
           <span>Aristotelis Gkouvas</span>
         </a>
-        <nav>
-          <ul class="nav-links" aria-label="Primary">
-            <li><a href="../../#about">About</a></li>
-            <li><a href="../../#experience">Experience</a></li>
-            <li><a href="../../#skills">Skills</a></li>
+        <nav aria-label="Primary">
+          <ul id="primary-nav" class="nav-links">
+            <li><a href="../../#services">Services</a></li>
             <li><a href="../../#work">Work</a></li>
-            <li><a href="../../#contact">Contact</a></li>
+            <li><a href="../../#process">Process</a></li>
+            <li><a href="../../#faq">FAQ</a></li>
+            <li><a href="../../cv/">CV</a></li>
           </ul>
         </nav>
         <div class="nav-cta">
-          <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
               <line class="top" x1="4" y1="6" x2="20" y2="6"/>
               <line class="mid" x1="4" y1="12" x2="20" y2="12"/>
@@ -61,7 +67,7 @@
           Back to all work
         </a>
         <div class="project-meta-row reveal">
-          <span>Project <strong>02</strong></span>
+          <span>Project <strong>04</strong></span>
           <span>Year <strong>2026</strong></span>
           <span>Role <strong>Solo developer</strong></span>
           <span>Status <strong style="color:var(--accent)">Live</strong></span>
@@ -73,6 +79,11 @@
           QR code — guests scan, upload and browse straight from the browser,
           with no app and no account.
         </p>
+        <div class="summary-el reveal" lang="el">
+          <p class="fact-label">Με λίγα λόγια</p>
+          <p>Ένα QR code στο τραπέζι και όλοι οι καλεσμένοι ανεβάζουν τις φωτογραφίες τους στο ίδιο άλμπουμ — χωρίς εφαρμογή και χωρίς λογαριασμό.</p>
+          <p>Ο διοργανωτής πληρώνει μία φορά και κατεβάζει τα πάντα σε πλήρη ανάλυση. Ζωντανό προϊόν, με πραγματικούς πελάτες.</p>
+        </div>
         <p class="reveal" style="margin-top:1rem;">
           <a class="btn-link" href="https://peitecheese.gr/" target="_blank" rel="noopener">
             Visit live site
@@ -83,7 +94,7 @@
 
       <section class="container reveal">
         <div class="project-cover">
-          <img src="../../assets/projects/peitecheese/cover.jpg" alt="ΠείτεCheese landing page — «Πες Cheese!» headline next to a phone showing a live event gallery" />
+          <img src="../../assets/projects/peitecheese/cover.webp" width="1600" height="751" alt="ΠείτεCheese landing page — «Πες Cheese!» headline next to a phone showing a live event gallery" loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -205,34 +216,45 @@
           <span class="section-divider" aria-hidden="true"></span>
         </div>
         <div class="gallery-grid">
-          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/01-hero.jpg" data-caption="Landing — «Πες Cheese! κι όλοι γίνονται φωτογράφοι»">
-            <img src="../../assets/projects/peitecheese/01-hero.jpg" alt="Landing hero with phone mockup" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/01-hero.webp" data-caption="Landing — «Πες Cheese! κι όλοι γίνονται φωτογράφοι»">
+            <img src="../../assets/projects/peitecheese/01-hero.webp" width="1600" height="751" alt="Landing hero with phone mockup" loading="lazy" />
             <span class="gallery-caption">Landing — <span lang="el">«Πες Cheese!»</span></span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/06-guest.jpg" data-caption="Guest gallery on a phone — event header, live photo count, tap to upload">
-            <img src="../../assets/projects/peitecheese/06-guest.jpg" alt="Guest gallery on a phone" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/06-guest.webp" data-caption="Guest gallery on a phone — event header, live photo count, tap to upload">
+            <img src="../../assets/projects/peitecheese/06-guest.webp" width="828" height="1792" alt="Guest gallery on a phone" loading="lazy" />
             <span class="gallery-caption">Guest gallery — mobile, no account</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/05-livewall.jpg" data-caption="Live wall — full-screen slideshow with a scan-me QR for the venue">
-            <img src="../../assets/projects/peitecheese/05-livewall.jpg" alt="Live wall slideshow with QR code" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/05-livewall.webp" data-caption="Live wall — full-screen slideshow with a scan-me QR for the venue">
+            <img src="../../assets/projects/peitecheese/05-livewall.webp" width="1600" height="1000" alt="Live wall slideshow with QR code" loading="lazy" />
             <span class="gallery-caption">Live wall — projector slideshow</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/07-qr.png" data-caption="Printable QR sheet for the tables, generated per event">
-            <img src="../../assets/projects/peitecheese/07-qr.png" alt="Printable per-event QR sheet" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/07-qr.webp" data-caption="Printable QR sheet for the tables, generated per event">
+            <img src="../../assets/projects/peitecheese/07-qr.webp" width="828" height="1792" alt="Printable per-event QR sheet" loading="lazy" />
             <span class="gallery-caption">Printable QR sheet — one per event</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/02-how.png" data-caption="How it works — set up, guests scan and upload, live wall and download">
-            <img src="../../assets/projects/peitecheese/02-how.png" alt="Three-step how it works section" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/02-how.webp" data-caption="How it works — set up, guests scan and upload, live wall and download">
+            <img src="../../assets/projects/peitecheese/02-how.webp" width="1600" height="691" alt="Three-step how it works section" loading="lazy" />
             <span class="gallery-caption">Three steps, zero effort</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/03-features.png" data-caption="Feature grid — QR, real-time gallery, guestbook, unlimited uploaders, reactions, ZIP export">
-            <img src="../../assets/projects/peitecheese/03-features.png" alt="Feature grid on the landing page" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/03-features.webp" data-caption="Feature grid — QR, real-time gallery, guestbook, unlimited uploaders, reactions, ZIP export">
+            <img src="../../assets/projects/peitecheese/03-features.webp" width="1600" height="963" alt="Feature grid on the landing page" loading="lazy" />
             <span class="gallery-caption">Features — from QR to ZIP</span>
           </a>
-          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/04-pricing.png" data-caption="Pricing — Basic / Plus / Premium, paid once per event with separate photo and video caps">
-            <img src="../../assets/projects/peitecheese/04-pricing.png" alt="Pricing tiers Basic, Plus, Premium" loading="lazy" />
+          <a class="gallery-item reveal" href="../../assets/projects/peitecheese/04-pricing.webp" data-caption="Pricing — Basic / Plus / Premium, paid once per event with separate photo and video caps">
+            <img src="../../assets/projects/peitecheese/04-pricing.webp" width="1600" height="1113" alt="Pricing tiers Basic, Plus, Premium" loading="lazy" />
             <span class="gallery-caption">Pricing — one payment per event</span>
           </a>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="case-cta reveal">
+          <h2>Θέλετε κάτι αντίστοιχο για την επιχείρησή σας;</h2>
+          <p>Δύο γραμμές για το τι χρειάζεστε — απαντώ εντός 24 ωρών με τα επόμενα βήματα, χωρίς καμία δέσμευση.</p>
+          <div class="hero-actions">
+            <a href="mailto:aristotelisgouvas@gmail.com" class="btn btn-primary">Στείλτε email</a>
+            <a href="../../#work" class="btn btn-ghost">Δείτε όλα τα έργα</a>
+          </div>
         </div>
       </section>
 
