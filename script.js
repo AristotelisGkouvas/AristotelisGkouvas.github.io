@@ -223,6 +223,35 @@ const PHONE = "";
   });
 })();
 
+// Contact brief — composes a pre-filled e-mail instead of posting anywhere.
+// A static site has no backend, and a blank "email me" link was arriving with
+// none of the three things needed to quote a job.
+(() => {
+  const form = document.getElementById("brief");
+  if (!form) return;
+  const TO = "aristotelisgouvas@gmail.com";
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const v = (n) => (form.elements[n]?.value || "").trim();
+    const en = document.documentElement.lang === "en";
+    const L = en
+      ? { s: "Project enquiry", what: "What", when: "When", budget: "Budget", about: "About", phone: "Phone" }
+      : { s: "Ζήτηση για έργο", what: "Τι", when: "Πότε", budget: "Προϋπολογισμός", about: "Περιγραφή", phone: "Τηλέφωνο" };
+    const body = [
+      `${L.what}: ${v("what")}`,
+      `${L.when}: ${v("when")}`,
+      `${L.budget}: ${v("budget")}`,
+      v("phone") ? `${L.phone}: ${v("phone")}` : null,
+      "",
+      v("about"),
+    ].filter((x) => x !== null).join("\n");
+    location.href =
+      `mailto:${TO}?subject=${encodeURIComponent(L.s + " — " + v("what"))}` +
+      `&body=${encodeURIComponent(body)}`;
+  });
+})();
+
 // ---------------------------------------------------------------------------
 // Language — the page is authored in Greek; English is swapped in from the
 // dictionary below. Order of precedence: ?lang= in the URL, then the last
@@ -242,24 +271,24 @@ const PHONE = "";
     heroTitle1: "Software that runs every day", heroTitle2: "inside real businesses.",
     heroBody: "I design and build web apps, ERPs, e-shops and industrial dashboards end-to-end. Seven of the projects below run in production with real users; one is in development and one is a personal tool.",
     heroCta1: "Discuss your project", heroCta2: "See the work",
-    stat1: "years running production systems", stat2: "projects with real users", stat3: "response time to every message",
+    stat1: "years running production systems", stat2: "projects with real users", stat3: "sites you can open right now",
     heroBadgeLabel: "In production since 2024", heroBadgeValue: "ERP · 6 departments, one system",
     liveLabel: "Live right now", liveSub: "Open them — no need to take my word for it.",
     live1: "Event photo-collection SaaS", live2: "Sponsorship platform for cultural associations", live3: "Holiday apartments · 9.1/10 on Booking", live4: "Municipal street-lighting management on a map",
     servicesTitle: "What I can take on",
-    servicesSub: "One partner for the whole technical side — from the database to the screen your customer sees.",
+    servicesSub: "One partner for the whole technical side — with the Greek integrations (myDATA, tax authority, ACS, Box Now, Viva Wallet) working from day one.",
     svc1t: "Custom web apps & SaaS", svc1d: "Platforms with users, subscriptions, payments (Stripe / Viva Wallet) and file storage — built to scale.",
     svc2t: "ERP & internal tools", svc2d: "Customer, contract, warehouse, invoicing and field-technician management — shaped around how you already work.",
-    svc3t: "E-shops (WooCommerce)", svc3d: "Online stores with Greek-market integrations: myDATA, ACS, Box Now, Viva Wallet, plus custom plugins where needed.",
+    svc3t: "E-shops with Greek integrations", svc3d: "Online stores with Greek-market integrations: myDATA, ACS, Box Now, Viva Wallet, plus custom plugins where needed.",
     svc4t: "Dashboards & industrial IoT", svc4d: "Real-time sensor monitoring, alarms, charts and bridges to existing (even legacy) systems.",
     svc5t: "3D & WebGL", svc5d: "Three-dimensional visualisation in the browser — from tank heatmaps to 3D-print costing tools.",
-    svc6t: "Digital menus & small sites", svc6d: "Fast bilingual websites for hospitality and tourism, with zero monthly running cost.",
-    caseTitle: "Case study in depth", present: "present", production: "Production",
-    caseLead: "The ERP that runs the whole of IQsoft — customers, contracts, tickets, warehouse, timesheets, invoicing. Sole developer from database schema to deployment.",
-    caseM1: "of uninterrupted operation", caseM2: "departments in one system", caseM3: "days of downtime during migration",
-    caseProblemL: "The problem", caseProblem: "The company ran on scattered files, hand-written tickets and no single view of contracts or stock. Field technicians had access to nothing.",
-    caseSolutionL: "The solution", caseSolution: "One Next.js + Django system with roles, per-department workflows and mobile-friendly screens for technicians. Gradual migration, no downtime.",
-    caseResultL: "The result", caseResult: "The entire company has run on one platform since 2024. Every ticket, contract and invoice goes through it — and product decisions come from daily contact with the users.",
+    svc6t: "Websites & digital menus", svc6d: "Fast bilingual websites for hospitality and tourism, with zero monthly running cost.",
+    caseTitle: "Case study in depth", caseClient: "Client", pIq: "The system that runs an entire field-services company — customers, contracts, job tickets, warehouse, timesheets and invoicing.", present: "present", production: "Production",
+    caseLead: "An online store for a 3D-printing studio. Customers upload their own file and get a price instantly — and the shop is wired into everything a Greek business needs to trade legally and without manual work.",
+    caseM1: "Greek integrations", caseM2: "emails needed to get a quote", caseM3: "orders, with no involvement from you",
+    caseProblemL: "The problem", caseProblem: "The studio sold both stock products and custom prints. Stock was fine, but every custom order burned time in email: the customer sent a file, someone opened it, worked out a price and replied.",
+    caseSolutionL: "The solution", caseSolution: "A custom WooCommerce plugin: the customer uploads an STL, sees an instant price based on volume, material and settings, and adds it to the cart — without talking to anyone.",
+    caseResultL: "The result", caseResult: "Around the store sits the full Greek stack: myDATA for invoices to the tax authority, ACS / Box Now / ELTA for shipping with automatic waybills, and Viva Wallet for cards and instalments.",
     readCase: "Full case study",
     workTitle: "Selected work", industrial: "Industrial", publicSector: "Public sector", smallSite: "Restaurants",
     platform: "Platform", hospitality: "Tourism", sideProject: "Side project",
@@ -287,7 +316,7 @@ const PHONE = "";
     faq4q: "Hosting and domain — what do I need?", faq4a: "I guide you through buying a domain and hosting in your name and handle the entire technical setup (server, SSL, backups). For small sites the running cost is often zero.",
     contactLabel: "Contact", contactTitle: "Have an idea, or a problem that needs solving?",
     contactBody: "Send me two lines about what you need. I reply within 24 hours with next steps — no commitment.",
-    contactEmail: "Send an email", contactCopy: "Copy email", contactCv: "CV",
+    contactEmail: "Or just e-mail", opWeb: "Website or digital menu", opShop: "E-shop", opApp: "Custom app or internal tool", opOther: "Something else", opNow: "Right away", opSoon: "In the next 1-3 months", opLater: "No rush", opDunno: "Not sure yet", opB1: "up to 1,000 EUR", opB2: "1,000-3,000 EUR", opB3: "3,000-10,000 EUR", opB4: "over 10,000 EUR", bfWhat: "What you need", bfWhen: "When", bfBudget: "Budget", bfAbout: "Two lines about what you want", bfAboutPh: "e.g. I run a tavern in Ioannina and want a digital menu with QR codes on the tables", bfPhone: "Phone, so I can call you", bfSend: "Send it", bfNote: "Opens your e-mail app with everything filled in — nothing is sent without you.", faq5q: "What if something breaks on a Saturday night?", faq5a: "The critical things — the site will not open, orders or payments are not going through — take priority and do not wait for Monday. Every project has automatic backups, so it can be rolled back instead of debugged under pressure. If you want a guaranteed response time in writing, it goes into the maintenance agreement.", contactCopy: "Copy email", contactCv: "CV",
     footer: "Designed & built by Aristotelis Gkouvas",
     metaDescription: "Aristotelis Gkouvas — full-stack developer. Web apps, ERPs, e-shops and industrial dashboards running in production inside real businesses.",
   };
@@ -309,6 +338,10 @@ const PHONE = "";
     nodes.forEach((n) => {
       const v = dict[n.dataset.i18n];
       if (v != null) n.textContent = v;
+    });
+    document.querySelectorAll("[data-i18n-ph]").forEach((n) => {
+      const v = dict[n.dataset.i18nPh];
+      if (v != null) n.placeholder = v;
     });
     if (elMeta && dict.metaDescription) elMeta.content = dict.metaDescription;
     document.documentElement.lang = lang;

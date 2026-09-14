@@ -1667,3 +1667,70 @@ html.js-reveal .reveal:not(.is-visible) {
 }
 
 @media (max-width: 600px) { .case-cta { padding: 32px 20px; } }
+
+/* -- Contact brief ---------------------------------------- */
+/* Every CTA used to end in a blank email, so a lead arrived with none of the
+   three things needed to quote it. This asks for them and hands the visitor a
+   pre-filled message; no backend, nothing sent without them. */
+
+.brief {
+  display: grid;
+  gap: 16px;
+  max-width: 720px;
+  margin: 32px auto 0;
+  text-align: left;
+}
+
+.brief-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.brief label { display: grid; gap: 7px; }
+
+.brief label > span {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.brief select,
+.brief textarea,
+.brief input {
+  width: 100%;
+  font: inherit;
+  font-size: 15px;
+  color: var(--text);
+  background: var(--bg-2);
+  border: 1px solid var(--border-2);
+  border-radius: 10px;
+  padding: 11px 13px;
+  transition: border-color var(--t-fast) var(--ease);
+}
+
+.brief textarea { resize: vertical; line-height: 1.6; }
+.brief select { appearance: none; cursor: pointer; }
+
+.brief select:focus,
+.brief textarea:focus,
+.brief input:focus { border-color: var(--accent); outline: none; }
+
+.brief ::placeholder { color: var(--text-4); }
+
+.brief-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.brief-note { font-size: 13px; line-height: 1.5; }
+
+@media (max-width: 560px) {
+  .brief-row { grid-template-columns: 1fr; }
+  .brief-actions .btn { width: 100%; justify-content: center; }
+}
