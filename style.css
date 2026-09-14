@@ -890,21 +890,52 @@ html.js-reveal .reveal:not(.is-visible) {
   .brand span:last-child { display: none; }
 }
 
-/* -- Greek summary on case studies -------------------------- */
+/* -- Greek summary on case studies ------------------------ */
+/* The body of each case study is an engineering write-up in English. This
+   block is what the person who would actually pay reads, so it gets the
+   prominence: what was wrong, what was built, what changed. */
 
 .summary-el {
   margin-top: 2rem;
-  padding: 1.25rem 1.5rem;
+  padding: 1.5rem 1.75rem;
   border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
   border-radius: var(--radius);
   background: var(--surface);
-  max-width: var(--container-prose);
+  max-width: 760px;
 }
 
-.summary-el p:last-child { margin-bottom: 0; }
-.summary-el p + p { margin-top: 0.6rem; }
+.summary-el .fact-label { margin-bottom: 1rem; }
 
-.summary-el .fact-label { margin-bottom: 0.5rem; }
+.summary-parts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem 1.5rem;
+}
+
+.summary-parts dt {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+  padding-top: 0.2rem;
+}
+
+.summary-parts dd {
+  color: var(--text-2);
+  font-size: 0.97rem;
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+@media (max-width: 620px) {
+  .summary-el { padding: 1.25rem; }
+  .summary-parts { grid-template-columns: 1fr; gap: 0.25rem; }
+  .summary-parts dd { margin-bottom: 0.9rem; }
+  .summary-parts dd:last-child { margin-bottom: 0; }
+}
 
 /* -- Confidentiality / demo-data note ----------------------- */
 
